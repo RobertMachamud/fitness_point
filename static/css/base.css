@@ -1,0 +1,90 @@
+/* ------------------------------------------------------------------ GENERAL */
+
+:root
+{
+    --redish: #DF3449;
+}
+
+html
+{
+    height: 100%;
+}
+
+body 
+{
+    background: url('/media/muscle_flexing.jpg') no-repeat center center;
+    background-size: cover;
+    height: calc(100vh - 128px);
+    font-family: 'Lato';
+}
+
+/* ------------------------------------------------------------------ COLORS */
+
+.redish-color
+{
+    color: var(--redish) !important;
+}
+
+.dark-white-bg
+{
+    background: #eee !important;
+}
+
+.text-black
+{
+    color: #000 !important;
+}
+
+/* ------------------------------------------------------------------ HEADER / NAVBAR */
+
+header
+{
+    background: #000;
+    background: #212224;
+}
+
+.menu-btn
+{
+    font-size: 1.5em;
+}
+
+.nav-link
+{
+    color: #fff;
+}
+
+.nav-link:hover
+{
+    color: rgba(255,255,255,.5);
+}
+
+.dropdown-menu
+{
+    background: #eee;
+}
+
+.dropdown-menu.search-dropdown
+{
+    background: #525252;
+}
+
+.header-cont
+{
+    height: 128px;
+}
+
+
+/* ------------------------------------------------------------------ HOME PAGE */
+
+.to-offers-button
+{
+    background: var(--redish);
+    color: #fafafa;
+}
+
+.to-offers-button:hover
+{
+    background: rgba(223, 52, 73, .6);
+    color: #fff;
+}
+

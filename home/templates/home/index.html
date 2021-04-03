@@ -1,6 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-cont">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">Check one two</h1>
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-4 logo-font text-white">
+                    The new collections are here
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="" class="to-offers-button btn btn-lg rounded-0 text-uppercase py-3">Go To Shop</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container h-100">
+        <div class="row h-100">
+            <h2 class="text-center">See all our courses and become a member</h2>
+            <div class="dark-white-bg col-12 col-md-4"></div>
+            <div class="dark-white-bg col-12 col-md-4"></div>
+            <div class="dark-white-bg col-12 col-md-4"></div>
+        </div>
+    </div>
 {% endblock %}
