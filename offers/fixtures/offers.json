@@ -1,0 +1,32 @@
+[
+    {
+        "pk": 1,
+        "model": "offers.offer",
+        "fields": {
+            "name": "cardio",
+            "level": "",
+            "descr": "a basic cardio course where the course participants can improve their endurance and grow over their limits.",
+            "price": 25.99,
+            "category": 2,
+            "days": ["monday", "through", "friday"],
+            "time": ["9:00am", "3:30pm"],
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": ".jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "offers.offer",
+        "fields": {
+            "name": "body pump",
+            "level": "",
+            "descr": "a basic cardio course where the course participants can improve their endurance and grow over their limits.",
+            "price": 39.99,
+            "category": 1,
+            "days": ["wednesday", "through", "friday"],
+            "time": ["10:00am", "4:30pm"],
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": ".jpg"
+        }
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "pk": 1,
+        "model": "offers.category",
+        "fields": {
+            "name": "strength",
+            "user_friendly": "Strength"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "offers.category",
+        "fields": {
+            "name": "cardio",
+            "user_friendly": "Cardio"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "offers.category",
+        "fields": {
+            "name": "yoga",
+            "user_friendly": "Yoga"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "offers.category",
+        "fields": {
+            "name": "stretching",
+            "user_friendly": "Stretching"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "offers.category",
+        "fields": {
+            "name": "kick_boxing",
+            "user_friendly": "Kick-/Boxing"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "offers.category",
+        "fields": {
+            "name": "physio_recovery",
+            "user_friendly": "Physio/Recovery"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "offers.category",
+        "fields": {
+            "name": "bums_tums_legs",
+            "user_friendly": "Bums, Tums & Legs"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "offers.category",
+        "fields": {
+            "name": "items_clothing",
+            "user_friendly": "Clothing"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "offers.category",
+        "fields": {
+            "name": "items_equipment",
+            "user_friendly": "Shakers & Gear"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "offers.category",
+        "fields": {
+            "name": "new_items",
+            "user_friendly": "New Items"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "offers.category",
+        "fields": {
+            "name": "new_courses",
+            "user_friendly": "New Courses"
+        }
+    }
+]

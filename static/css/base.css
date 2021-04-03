@@ -82,7 +82,8 @@ header
     color: #fafafa;
 }
 
-.to-offers-button:hover
+.to-offers-button:hover,
+.go-to-offer-btn:hover
 {
     background: rgba(223, 52, 73, .6);
     color: #fff;
