@@ -682,5 +682,366 @@
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "spinning_bike.jpg"
         }
+    },
+    {
+        "pk": 37,
+        "model": "offers.offer",
+        "fields": {
+            "name": "shoulder aerobic",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 11.59,
+            "category": 12,
+            "day_one": "monday",
+            "day_two": "wednesday",
+            "day_span": "and",
+            "time_one": "9:00am",
+            "time_two": "11:40pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "women_working_out_dumbbells.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "offers.offer",
+        "fields": {
+            "name": "quads",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 12.69,
+            "category": 7,
+            "day_one": "saturday",
+            "day_two": "thursday",
+            "day_span": "trough",
+            "time_one": "9:50am",
+            "time_two": "6:50pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "women_squats_behind.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "offers.offer",
+        "fields": {
+            "name": "pullup routine",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 7.69,
+            "category": 1,
+            "day_one": "monday",
+            "day_two": "sunday",
+            "day_span": "trough",
+            "time_one": "6:50am",
+            "time_two": "8:50pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "man_pullup_closeup.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "offers.offer",
+        "fields": {
+            "name": "deadlift hell",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 7.69,
+            "category": 1,
+            "day_one": "monday",
+            "day_two": "saturday",
+            "day_span": "and",
+            "time_one": "1:30pm",
+            "time_two": "7:00pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "man_deadlifting_behind.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "offers.offer",
+        "fields": {
+            "name": "rowing",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem. Sint cupiditate rem quaerat, quo maxime officia praesentium. dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 8.39,
+            "category": 2,
+            "day_one": "monday",
+            "day_two": "saturday",
+            "day_span": "trough",
+            "time_one": "12:50pm",
+            "time_two": "2:50pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "rowing_closeup_dark.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "offers.offer",
+        "fields": {
+            "name": "aerobic",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem. Sint cupiditate rem quaerat, quo maxime officia praesentium. dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 9.39,
+            "category": 7,
+            "day_one": "tuesday",
+            "day_two": "saturday",
+            "day_span": "trough",
+            "time_one": "7:40pm",
+            "time_two": "2:20pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "women_training_gym.jpg"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "offers.offer",
+        "fields": {
+            "name": "medicine ball 10kg",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 21.79,
+            "category": 9,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "medicine_ball_gym.jpg"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "offers.offer",
+        "fields": {
+            "name": "muay thai",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lupiditat rem quaerat, quo maxime officia praesentium sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 18.99,
+            "category": 11,
+            "day_one": "wednesday",
+            "day_two": "",
+            "day_span": "only",
+            "time_one": "3:40pm",
+            "time_two": "6:40pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "wraped_fist_boxing.jpg"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "offers.offer",
+        "fields": {
+            "name": "violet dumbbells 3kg",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 29.39,
+            "category": 9,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "violet_dumbbells_woman_holding_two.jpg"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "offers.offer",
+        "fields": {
+            "name": "lime green nikes",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 55.89,
+            "category": 10,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "lime_nikes.jpg"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "offers.offer",
+        "fields": {
+            "name": "smart watch",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 29.39,
+            "category": 9,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "smart_watch_sport_mat.jpg"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "offers.offer",
+        "fields": {
+            "name": "purple jacket women",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 25.19,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_purple_sport_jacket.jpg"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "offers.offer",
+        "fields": {
+            "name": "yoga mat",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 17.29,
+            "category": 9,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_rolling_blue_yoga_mat.jpg"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "offers.offer",
+        "fields": {
+            "name": "acro yoga",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lupiditat rem quaerat, quo maxime officia praesentium sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 21.89,
+            "category": 11,
+            "day_one": "tuesday",
+            "day_two": "",
+            "day_span": "only",
+            "time_one": "4:00pm",
+            "time_two": "7:15pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "wraped_fist_boxing.jpg"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "offers.offer",
+        "fields": {
+            "name": "white top for women",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis moltia quae ipsum, quo necessitatibus maxime officia. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 13.79,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_white_sport_top_standing.jpg"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "offers.offer",
+        "fields": {
+            "name": "black nikes for men",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis moltia quae ipsum, quo necessitatibus maxime officia. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 38.69,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "black_nikes.jpg"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "offers.offer",
+        "fields": {
+            "name": "gravity squat",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lupiditat rem quaerat, quo maxime officia praesentium sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 19.19,
+            "category": 11,
+            "day_one": "tuesday",
+            "day_two": "saturday",
+            "day_span": "and",
+            "time_one": "7:50am",
+            "time_two": "12:55pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_weighted_squat_black.jpg"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "offers.offer",
+        "fields": {
+            "name": "orange pumas for men",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis moltia quae ipsum, quo necessitatibus maxime officia. Autem ad debitis laborum assumenda nobi earum.",
+            "price": 44.39,
+            "category": 10,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "pumas_sole_bottom.jpg"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "offers.offer",
+        "fields": {
+            "name": "gripstrength trainer",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 11.59,
+            "category": 9,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "hand_grip_trainer.jpg"
+        }
     }
 ]

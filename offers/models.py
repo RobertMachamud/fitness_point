@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     user_friendly = models.CharField(max_length=254, null=True, blank=True)
 
@@ -12,7 +16,7 @@ class Category(models.Model):
         return self.user_friendly
 
 
-class Product(models.Model):
+class Offer(models.Model):
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)

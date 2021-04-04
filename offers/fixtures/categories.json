@@ -68,7 +68,7 @@
         "model": "offers.category",
         "fields": {
             "name": "items_equipment",
-            "user_friendly": "Shakers & Gear"
+            "user_friendly": "Fitness Gear"
         }
     },
     {
