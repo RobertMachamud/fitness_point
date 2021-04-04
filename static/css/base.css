@@ -89,3 +89,86 @@ header
     color: #fff;
 }
 
+
+/* ------------------------------------------------------------------ OFFERS */
+
+/* Background to overlay image */
+.dark-background
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0D1116;
+}
+
+/* Badges */
+span.badge
+{
+    border-color: var(--redish);
+    color: #fff !important;
+    border-color: red !important;
+}
+
+span.badge:hover
+{
+    background: var(--redish);
+    color: #fff;
+}
+
+/* Underlines */
+.white-hr
+{
+    margin: 1em auto;
+    border: solid 1px rgba(255,255,255,1);
+}
+
+/* Underline for Cards */
+.card-hr
+{
+    width: 80%;
+    margin: .5em auto;
+    border: solid 1px rgba(0,0,0,.3)
+}
+
+/* Offer Cards */
+.offer
+{
+    background: #333;
+    color: #fff;
+    /* !!!*/
+    box-shadow: 0 0 10px rgba(0,0,0,.8);
+}
+
+/* Price */
+.offers-price
+{
+    margin-top: -.5em;
+    font-size: 2em;
+    color: var(--redish);
+}
+
+.floating-dollar
+{
+    color: #fafafa;
+    font-size: .5em;
+    position: absolute;
+    transform: translate(-150%, 30%);
+}
+
+.floating-cents
+{
+    font-size: .5em;
+    position: absolute;
+    transform: translate(10%, 30%);
+}
+
+/* Card Button */
+.go-to-offer-btn
+{
+    color: #fff;
+    width: 100%;
+    background: var(--redish);
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-def index(request):
+def all_offers(request):
     """ A view to return the index/landing page """
 
     return render(request, 'home/index.html')

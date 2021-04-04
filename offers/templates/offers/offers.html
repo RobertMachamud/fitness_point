@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-cont">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="dark-background"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3 mt-5">
+                <h2 class="logo-font text-white text-uppercase mt-5">OFFERS</h2>
+                
+                <div class="mb-3 w-50 white-hr"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 mt-5 offset-1">
+                <div class="row">
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="card offer">
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="woman-in-black-sports-bra-and-black-legging-sitting-on-red-3757955.jpg">
+                            </a>
+                            <div class="card-body pb-0">
+                                <p class="mb-0 text-center">CARDIO</p>
+                            </div>
+                            <div class="mb-3 card-hr"></div>
+                            <div class="card-footer pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="offers-price lead mb-0 text-center font-weight-bold">
+                                            <span class="floating-dollar">$</span> 49
+                                            <span class="floating-cents">99</span>
+                                        </p>
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted" href="">
+                                                <i class="fab fa-buffer mr-1"></i>
+                                                Cardio
+                                            </a>
+                                        </p>
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock mr-1"></i>
+                                            9:00am and 3:30pm
+                                        </small>
+                                        <p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-calendar-alt mr-1"></i>
+                                                Monday through Friday
+                                            </small>
+                                        </p>
+                                        <div class="col text-center" style="padding: 0">
+                                            <a href="" class="go-to-offer-btn btn rounded-0 text-uppercase">
+                                                Go To Offer
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
