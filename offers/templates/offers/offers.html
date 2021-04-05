@@ -16,7 +16,7 @@
             <div class="col text-center mt-2">
                 <h2 class="logo-font text-white text-uppercase mt-5">OFFERS</h2> 
                 {% for cat in curr_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ cat.name }}">
+                    <a class="category-badge text-decoration-none" href="{% url 'offers' %}?category={{ cat.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border">{{ cat.user_friendly }}</span>
                     </a>
                 {% endfor %}   

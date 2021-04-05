@@ -35,14 +35,17 @@
                         <span class="floating-cents"></span>
                     </p>
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="">
-                            <i class="fab fa-buffer mr-1"></i>
-                            {% if offer.category %}
-                            {{ offer.category.user_friendly }}
-                            {% else %}
-                            Offer
-                            {% endif %}
-                        </a>
+                        {% if offer.category %}
+                            <a class="text-muted" href="{% url 'offers' %}?category={{ offer.category.name }}">
+                                <i class="fab fa-buffer mr-1"></i>
+                                {{ offer.category.user_friendly }}
+                            </a>
+                        {% else %}
+                            <a class="text-muted" href="#">
+                                <i class="fab fa-buffer mr-1"></i>
+                                Offer
+                            </a>
+                        {% endif %}
                     </p>
                     {% if offer.is_course %}
                     <small class="text-muted">
