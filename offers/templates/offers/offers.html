@@ -17,14 +17,39 @@
                 <h2 class="logo-font text-white text-uppercase mt-5">OFFERS</h2> 
                 {% for cat in curr_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'offers' %}?category={{ cat.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border">{{ cat.user_friendly }}</span>
+                        <span class="p-2 mt-2 badge badge-white text-white rounded-0 border">{{ cat.user_friendly }}</span>
                     </a>
                 {% endfor %}   
-                <div class="mb-3 w-50 white-hr"></div>
+                <div class="mb-2 w-50 white-hr"></div>
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 mt-5 offset-1">
+            <div class="product-container col-10 mt-4 offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <!-- !!! -->
+                            <select id="sort-selector" class="sorting-select custom-select custom-select-sm border border-{% if curr_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if curr_sorting == 'None_None' %}selected{% endif %}>Sort Offers By...</option>
+                                <option value="price_asc" {% if curr_sorting == 'price_asc' %}selected{% endif %}>Price (Low To High)</option>
+                                <option value="price_desc" {% if curr_sorting == 'price_desc' %}selected{% endif %}>Price (High To Low)</option>
+                                <option value="name_asc" {% if curr_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if curr_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category_asc" {% if curr_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if curr_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if to_search or curr_categories or curr_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'offers' %}" class="redish-color">Show All Offers</a> | </span>
+                            {% endif %}
+                            {{ offers|length }} {% if offers|length == 1 %}Offer{% else %}Offers{% endif %}
+                            {% if to_search %} found for <strong>"{{ to_search }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     {% for offer in offers %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">

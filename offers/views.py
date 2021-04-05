@@ -2,6 +2,7 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Offer, Category
+from django.db.models.functions import Lower
 
 
 def all_offers(request):
@@ -29,12 +30,14 @@ def all_offers(request):
             if sort_key == 'name':
                 sort_key = 'lower_name'
                 offers = offers.annotate(lower_name=Lower('name'))
+            if sort_key == 'category':
+                sort_key = 'category__name'
 
             if 'direction' in request.GET:
                 sorting_direction = request.GET['direction']
                 if sorting_direction == 'desc':
                     sort_key = f'-{sort_key}'
-                offers = offers.order_by(sort_key)
+            offers = offers.order_by(sort_key)
 
         if 'category' in request.GET:
             categories_to_search = request.GET['category'].split(',')

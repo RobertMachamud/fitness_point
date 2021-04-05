@@ -129,11 +129,15 @@ header
     background: var(--dark-bg);
 }
 
+.sorting-select
+{
+    background-color: #eee;
+    border-radius: 3px;
+}
+
 /* Badges */
 span.badge
 {
-    border-color: var(--redish);
-    color: #fff !important;
     border-color: var(--redish) !important;
 }
 
