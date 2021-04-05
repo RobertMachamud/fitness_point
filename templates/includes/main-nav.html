@@ -17,13 +17,16 @@
                 All Courses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="courses-link">
-                <a href="" class="dropdown-item">Strength</a>
-                <a href="" class="dropdown-item">Cardio</a>
-                <a href="" class="dropdown-item">Yoga co.</a>
-                <a href="" class="dropdown-item">Stretching</a>
-                <a href="" class="dropdown-item">Physio</a>
-                <a href="" class="dropdown-item">Kick-/Boxing</a>
-                <a href="" class="dropdown-item">All Courses</a>
+                <a href="{% url 'offers' %}?category=strength" class="dropdown-item">Strength</a>
+                <a href="{% url 'offers' %}?category=cardio" class="dropdown-item">Cardio</a>
+                <a href="{% url 'offers' %}?category=yoga" class="dropdown-item">Yoga</a>
+                <a href="{% url 'offers' %}?category=stretching" class="dropdown-item">Stretching</a>
+                <a href="{% url 'offers' %}?category=physio_recovery" class="dropdown-item">Physio/Recovery</a>
+                <a href="{% url 'offers' %}?category=kick_boxing" class="dropdown-item">Kick-/Boxing</a>
+                <a href="{% url 'offers' %}?category=bums_tums_legs" class="dropdown-item">Bums, Tums & Legs</a>
+                <a href="{% url 'offers' %}?category=strength,cardio,yoga,stretching,physio_recovery,kick_boxing,bums_tums_legs" class="dropdown-item">
+                    All Courses
+                </a>
             </div>
         </li>
 
