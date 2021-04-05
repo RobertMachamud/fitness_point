@@ -7,8 +7,9 @@ from .models import Offer, Category
 def all_offers(request):
 
     """ A view to show all offers, including search queries and sorting """
-
+    sorting = None
     search_query = None
+    sorting_direction = None
     categories_to_search = None
     offers = Offer.objects.all()
 
@@ -22,18 +23,33 @@ def all_offers(request):
             queries_to_search = Q(name__icontains=search_query) | Q(descr__icontains=search_query)
             offers = offers.filter(queries_to_search)
 
+        if 'sort' in request.GET:
+            sort_key = request.GET['sort']
+            sorting = sort_key
+            if sort_key == 'name':
+                sort_key = 'lower_name'
+                offers = offers.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                sorting_direction = request.GET['direction']
+                if sorting_direction == 'desc':
+                    sort_key = f'-{sort_key}'
+                offers = offers.order_by(sort_key)
+
         if 'category' in request.GET:
             categories_to_search = request.GET['category'].split(',')
             offers = offers.filter(category__name__in=categories_to_search)
             categories_to_search = Category.objects.filter(
                 name__in=categories_to_search)
 
+    curr_sorting = f'{sorting}_{sorting_direction}'
+
     content = {
         'offers': offers,
         'to_search': search_query,
-        'curr_category': categories_to_search,
+        'curr_sorting': curr_sorting,
+        'curr_categories': categories_to_search,
     }
-
     return render(request, 'offers/offers.html', content)
 
 
@@ -46,5 +62,4 @@ def offer_details(request, offer_id):
     content = {
         'offer': offer,
     }
-
     return render(request, 'offers/offer_details.html', content)

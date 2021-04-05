@@ -14,7 +14,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-2">
-                <h2 class="logo-font text-white text-uppercase mt-5">OFFERS</h2>    
+                <h2 class="logo-font text-white text-uppercase mt-5">OFFERS</h2> 
+                {% for cat in curr_categories %}
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ cat.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border">{{ cat.user_friendly }}</span>
+                    </a>
+                {% endfor %}   
                 <div class="mb-3 w-50 white-hr"></div>
             </div>
         </div>
@@ -25,13 +30,13 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                             <div class="card offer">
                                 {% if offer.image %}
-                                    <a href="{% url 'offer_details' offer.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ offer.image.url }}" alt="{{ offer.name }}">
-                                    </a>
+                                        <a href="{% url 'offer_details' offer.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ offer.image.url }}" alt="{{ offer.name }}">
+                                        </a>
                                     {% else %}
-                                    <a href="{% url 'offer_details' offer.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ offer.name }}">
-                                    </a>
+                                        <a href="{% url 'offer_details' offer.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ offer.name }}">
+                                        </a>
                                     {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0 text-center text-uppercase">{{ offer.name }}</p>
@@ -45,14 +50,17 @@
                                                 <span class="floating-cents"></span>
                                             </p>
                                             <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="">
-                                                    <i class="fab fa-buffer mr-1"></i>
-                                                    {% if offer.category %}
+                                                {% if offer.category %}
+                                                    <a class="text-muted" href="{% url 'offers' %}?category={{ offer.category.name }}">
+                                                        <i class="fab fa-buffer mr-1"></i>
                                                         {{ offer.category.user_friendly }}
-                                                    {% else %}
+                                                    </a>
+                                                {% else %}
+                                                    <a class="text-muted" href="#">
+                                                        <i class="fab fa-buffer mr-1"></i>
                                                         Offer
-                                                    {% endif %}
-                                                </a>
+                                                    </a>
+                                                {% endif %}
                                             </p>
                                             {% if offer.is_course %}
                                                 <small class="text-muted">
