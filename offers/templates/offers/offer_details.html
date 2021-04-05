@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-cont">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="dark-background"></div>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="white-hr w-50"></div>
+            <div class="col-12 col-md-6 col-lg-5 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if offer.image %}
+                    <a href="{{ offer.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ offer.image.url }}">
+                    </a>
+                    {% else %}
+                    <a href="#" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ offer.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 ml-3">
+                <div class="offer-details-container mb-5 mt-md-5">
+                    <p class="mb-0 lead text-uppercase"><strong>{{ offer.name }}</strong></p>
+                    <p class="offers-price lead mb-2 mt-2 font-weight-bold">
+                        <span class="floating-dollar">$</span> {{ offer.price }}
+                        <span class="floating-cents"></span>
+                    </p>
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="">
+                            <i class="fab fa-buffer mr-1"></i>
+                            {% if offer.category %}
+                            {{ offer.category.user_friendly }}
+                            {% else %}
+                            Offer
+                            {% endif %}
+                        </a>
+                    </p>
+                    {% if offer.is_course %}
+                    <small class="text-muted">
+                        <i class="fas fa-clock mr-1"></i>
+                        {{ offer.time_one }} and {{ offer.time_two }}
+                    </small>
+                    <p>
+                        <small class="text-muted">
+                            <i class="fas fa-calendar-alt mr-1"></i>
+                            {{ offer.day_one|capfirst }} {{ offer.day_span }} {{ offer.day_two|capfirst }}
+                        </small>
+                    </p>
+                    {% else %}
+                    <small class="text-muted">
+                        <i class="fas fa-check mr-1"></i>
+                        Best quality - certified
+                    </small>
+                    <p>
+                        <small class="text-muted">
+                            <i class="fas fa-dolly mr-1"></i>
+                            No shipping - pick it up here
+                        </small>
+                    </p>
+                    {% endif %}
+
+                    <p class="mt-3">
+                        {{ offer.descr }}
+                    </p>
+                    <form class="form" action="" method="POST">
+                        <div class="form-row">
+
+
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decr-qty btn redish-bg rounded-0" data-item_id="{{ offer.id }}"
+                                                id="decr-qty_{{ offer.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control dark-white-bg qty-input" type="number" name="quantity"
+                                            value="1" min="1" max="99" data-item_id="{{ offer.id }}"
+                                            id="id_qty_{{ offer.id }}">
+                                        <div class="input-group-append">
+                                            <button class="incr-qty btn redish-bg rounded-0" data-item_id="{{ offer.id }}"
+                                                id="incr-qty_{{ offer.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col{% if s %}-12 mt-2{% endif %}">
+                                <a href="{% url 'offers' %}" class="btn btn-outline-black redish-border rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="text-white fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-white text-uppercase">back to shop</span>
+                                </a>
+                                <input type="submit"
+                                    class="btn text-white redish-hover redish-bg rounded-0 text-uppercase mt-5"
+                                    value="Add to Cart">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

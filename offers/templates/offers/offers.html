@@ -21,16 +21,15 @@
         <div class="row">
             <div class="product-container col-10 mt-5 offset-1">
                 <div class="row">
-
                     {% for offer in offers %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                             <div class="card offer">
                                 {% if offer.image %}
-                                    <a href="">
+                                    <a href="{% url 'offer_details' offer.id %}">
                                         <img class="card-img-top img-fluid" src="{{ offer.image.url }}" alt="{{ offer.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="">
+                                    <a href="{% url 'offer_details' offer.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ offer.name }}">
                                     </a>
                                     {% endif %}
@@ -63,7 +62,7 @@
                                                 <p>
                                                     <small class="text-muted">
                                                         <i class="fas fa-calendar-alt mr-1"></i>
-                                                        {{ offer.day_one }} {{ offer.day_span }} {{ offer_day_two }}
+                                                        {{ offer.day_one|capfirst }} {{ offer.day_span }} {{ offer.day_two|capfirst }}
                                                     </small>
                                                 </p>
                                             {% else %}
@@ -79,7 +78,7 @@
                                             </p>
                                             {% endif %}
                                             <div class="col text-center" style="padding: 0">
-                                                <a href="" class="go-to-offer-btn btn rounded-0 text-uppercase">
+                                                <a href="{% url 'offer_details' offer.id %}" class="go-to-offer-btn btn rounded-0 text-uppercase">
                                                     {% if offer.is_course %}
                                                         join course
                                                     {% else %}
