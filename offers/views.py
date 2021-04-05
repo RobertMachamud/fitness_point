@@ -9,7 +9,7 @@ def all_offers(request):
     """ A view to show all offers, including search queries and sorting """
 
     search_query = None
-    search_category = None
+    categories_to_search = None
     offers = Offer.objects.all()
 
     if request.GET:

@@ -21,8 +21,8 @@
                 <a href="{% url 'offers' %}?category=cardio" class="dropdown-item">Cardio</a>
                 <a href="{% url 'offers' %}?category=yoga" class="dropdown-item">Yoga</a>
                 <a href="{% url 'offers' %}?category=stretching" class="dropdown-item">Stretching</a>
-                <a href="{% url 'offers' %}?category=physio_recovery" class="dropdown-item">Physio/Recovery</a>
                 <a href="{% url 'offers' %}?category=kick_boxing" class="dropdown-item">Kick-/Boxing</a>
+                <a href="{% url 'offers' %}?category=physio_recovery" class="dropdown-item">Physio/Recovery</a>
                 <a href="{% url 'offers' %}?category=bums_tums_legs" class="dropdown-item">Bums, Tums & Legs</a>
                 <a href="{% url 'offers' %}?category=strength,cardio,yoga,stretching,physio_recovery,kick_boxing,bums_tums_legs" class="dropdown-item">
                     All Courses
@@ -35,20 +35,20 @@
                 Gym Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gym-equipment-link">
-                <a href="" class="dropdown-item">Shakers &amp; Protein</a>
-                <a href="" class="dropdown-item">Clothing</a>
-                <a href="" class="dropdown-item">All GymEquipments</a>
+                <a href="{% url 'offers' %}?category=items_equipment" class="dropdown-item">Shakers &amp; Gear</a>
+                <a href="{% url 'offers' %}?category=items_clothing" class="dropdown-item">Clothing</a>
+                <a href="{% url 'offers' %}?category=items_equipment,items_clothing" class="dropdown-item">All GymEquipments</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link" href="#" id="new-offers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+                Brand New
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="new-offers-link">
-                <a href="" class="dropdown-item">New Courses</a>
-                <a href="" class="dropdown-item">New Items</a>
-                <a href="" class="dropdown-item">All New Offers</a>
+                <a href="{% url 'offers' %}?category=new_courses" class="dropdown-item">New Courses</a>
+                <a href="{% url 'offers' %}?category=new_items" class="dropdown-item">New Items</a>
+                <a href="{% url 'offers' %}?category=new_courses,new_items" class="dropdown-item">All New Offers</a>
             </div>
         </li>
     </ul>
