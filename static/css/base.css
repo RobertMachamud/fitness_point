@@ -118,6 +118,17 @@ header
 
 /* ------------------------------------------------------------------ OFFERS */
 
+.scroll-top-btn
+{
+    position: fixed;
+    bottom: 10px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 9999999;
+}
+
 /* Background to overlay image */
 .dark-background
 {

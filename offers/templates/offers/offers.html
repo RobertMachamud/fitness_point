@@ -11,6 +11,11 @@
 
 {% block content %}
     <div class="dark-background"></div>
+    <div class="scroll-top-btn shadow-sm rounded-0 border redish-border">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-chevron-up mx-auto my-auto text-white"></i>
+        </a>	
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-2">
@@ -129,4 +134,43 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+
+        const scrollTopBtn = document.querySelector(".scroll-top-btn");
+        
+        // Scrolls smoothly to the top of the page
+        scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+	</script>
+    
+    <script type="text/javascript">
+
+        const sortSelector = document.querySelector("#sort-selector");
+
+        // Sorts Offers every time user selects order
+        sortSelector.addEventListener("change", (e) => {
+            let currUrl = new URL(window.location);
+            let selValue = e.target.value;
+
+            if (selValue != "reset") {
+                let sort = selValue.split("_")[0];
+                let direction = selValue.split("_")[1];
+
+                currUrl.searchParams.set("sort", sort);
+                currUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currUrl);
+            } else {
+                currUrl.searchParams.delete("sort");
+                currUrl.searchParams.delete("direction");
+
+                window.location.replace(currUrl);
+            }
+        });
+
+    </script>
 {% endblock %}
