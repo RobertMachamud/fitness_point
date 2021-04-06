@@ -33,14 +33,23 @@
                                     <th scope="col"><p class="cart-th lead">Subtotal</p></th>
                                 </tr>
                             </thead>
-
-<!--                            {% for item in cart_items %}-->
+                           {% for item in cart_items %}
                                 <tr>
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.offer.image.url }}">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 pr-1 text-white text-uppercase item-name">{{ item.offer.name }}</p>
+                                        <p class="my-0 text-muted"><strong style="font-weight: 400">Size: </strong>
+                                            {% if item.offer.has_sizes and not item.offer.is_shoe %}
+                                                {{ item.size|upper }}
+                                            {% elif item.offer.has_sizes and item.offer.is_shoe %}
+                                                {{ item.size }}
+                                            {% else %}
+                                                <small>N/A</small>
+                                            {% endif %}
+                                        </p>
+                                        <p class="my-0 small text-muted"></p>
                                     </td>
                                     <td class="py-3 px-1">
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> {{ item.offer.price }}</p>
@@ -85,7 +94,7 @@
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 33,55</p>
                                     </td>
                                 </tr>
-<!--                            {% endfor %}-->
+                           {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-white text-right">
                                     <!--{{ total|floatformat:2 }}-->
