@@ -10,5 +10,126 @@
 {% endblock %}
 
 {% block content %}
-    
+        <div class="dark-background"></div>
+    <div class="container cart-cont mb-2 cart-cont">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font text-white mb-4">Shopping Bag</h2>
+                <div class="white-hr w100 my-3"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+               {% if cart_items %}
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col"><p class="cart-th lead">Image</p></th>
+                                    <th scope="col"><p class="cart-th lead">Name</p></th>
+                                    <th scope="col"><p class="cart-th lead">Price</p></th>
+                                    <th scope="col"><p class="cart-th lead">Quantity</p></th>
+                                    <th scope="col"><p class="cart-th lead">Subtotal</p></th>
+                                </tr>
+                            </thead>
+
+<!--                            {% for item in cart_items %}-->
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="woman_weight_squat.jpg">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 item-name">PURPLE DUBBELLS 3KG</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 46,88</p>
+                                    </td>
+                                    <td class="py-3 w-25 pr-5 mobile-qty-td">
+                                        <form class="form update-form" method="POST" action="">
+                                            <!-- {% csrf_token %}-->
+                                            <div class="form-group">
+                                                <div class="input-group mobile-qty">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-sm redish-bg redish-hover rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decr-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-sm redish-bg redish-hover rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+<!--
+                                                    {% if item.product.has_sizes %}
+                                                        <input type="hidden" name="product_size" value="{{ item.size }}">
+                                                    {% endif %}
+-->
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="upd-link text-info"><small>Update</small></a>
+                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 33,55</p>
+                                    </td>
+                                </tr>
+<!--                            {% endfor %}-->
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <!--{{ total|floatformat:2 }}-->
+                                    <h6><strong>Cart Total: $66.,59</strong></h6>
+                                    <h6>Delivery: $5</h6>
+                                    <h6>Taxes: 15%</h6>
+                                    <!-- ${{ grand_total|floatformat:2 }}-->
+                                    <h4 class="mt-4"><strong>Your Total: <span class="ml-2 cart-prices redish-color">$490,67</span></strong></h4>
+<!--                                    {% if free_delivery_delta > 0 %}-->
+                                        <p class="mb-1 redish-color">
+                                            You could get free delivery by spending just <strong>$15,88</strong> more!
+                                        </p>
+<!--                                    {% endif %}-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right cart-checkout">
+                                    <!-- mb-2 -->
+                                    <a href="{% url 'products' %}" class="back-to-shop-btn btn btn-outline-black redish-border rounded-0 btn-lg">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">back to shop</span>
+                                    </a>
+                                    <a href="" class="btn redish-bg redish-hover rounded-0 btn-lg">
+                                        <span class="text-uppercase">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+               {% else %}
+                    <p class="lead mb-5">Your <span class="redish-color">Cart</span> is empty.</p>
+                    <a href="{% url 'offers' %}" class="btn text-white redish-bg redish-hover rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+               {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

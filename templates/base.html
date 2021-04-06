@@ -116,6 +116,14 @@
     {% endblock %}
 
     {% block postloadjs %}
+        <script type="text/javascript">
+
+            const scrollTopBtn = document.querySelector(".scroll-top-btn");
+            
+            // Scrolls smoothly to the top of the page
+            scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+        </script>
     {% endblock %}
 
     
