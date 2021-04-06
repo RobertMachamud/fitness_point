@@ -5,20 +5,25 @@
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#decr-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
     const enableDisableBtns = (itemId) => {
-        let currValue = pareseInt()  //
+        const incrQty = document.querySelector(`#incr-qty_${itemId}`);
+        const decrQty = document.querySelector(`#decr-qty_${itemId}`);
+        const qtyValue = document.querySelector(`#id_qty_${itemId}`);
+
+        let currValue = pareseInt(qtyValue.value);
         let minusDisabl = currValue < 2;
         let plusDisabl = currValue > 98;
 
-
+        // incrQty.
+        // decrQty.
     }
     //
 
-    
+
 
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');

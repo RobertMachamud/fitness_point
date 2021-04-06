@@ -55,7 +55,7 @@
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> {{ item.offer.price }}</p>
                                     </td>
                                     <td class="py-3 w-25 pr-5 mobile-qty-td">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adj_cart' item.item_id  %}}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group mobile-qty">

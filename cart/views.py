@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
+from products.models import Offer
 
 
 def to_cart(request):
@@ -37,3 +39,69 @@ def add_item_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(curr_url)
+
+
+def adj_cart(request, item_id):
+
+    """ Adjusts the quantity of item to specified amount """
+
+    item_size = None
+    qty = int(request.POST.get('qty'))
+    offer = get_object_or_404(Offer, pk=item_id)
+
+    if 'item_size' in request.POST:
+        item_size = request.POST['item_size']
+    cart = request.session.get('cart', {})
+
+    if item_size:
+        if qty > 0:
+            cart[item_id]['items_by_sz'][item_size] = qty
+            messages.success(
+                request, f'Updated size {item_size.upper()} {offer.name} quantity to {cart[item_id]["items_by_sz"][item_size]}')
+        else:
+            del cart[item_id]['items_by_sz'][item_size]
+            if not cart[item_id]['items_by_sz']:
+                cart.pop(item_id)
+            messages.success(
+                request, f'Removed size {item_size.upper()} {offer.name} from your cart')
+    else:
+        if qty > 0:
+            cart[item_id] = qty
+            messages.success(
+                request, f'Updated {offer.name} quantity to {cart[item_id]}')
+        else:
+            cart.pop(item_id)
+            messages.success(request, f'Removed {offer.name} from your cart')
+
+    request.session['cart'] = cart
+    return redirect(reverse('to_cart'))
+
+
+def rem_from_cart(request, item_id):
+
+    """ Removes the item from the cart """
+
+    try:
+        item_size = None
+        offer = get_object_or_404(Offer, pk=item_id)
+
+        if 'item_size' in request.POST:
+            item_size = request.POST['item_size']
+        cart = request.session.get('cart', {})
+
+        if item_size:
+            del cart[item_id]['items_by_sz'][item_size]
+            if not cart[item_id]['items_by_sz']:
+                cart.pop(item_id)
+            messages.success(
+                request, f'Removed size {item_size.upper()} {offer.name} from your cart')
+        else:
+            cart.pop(item_id)
+            messages.success(request, f'Removed {offer.name} from your cart')
+
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
