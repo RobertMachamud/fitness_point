@@ -74,10 +74,9 @@
                     <p class="mt-3">
                         {{ offer.descr }}
                     </p>
-                    <form class="form" action="" method="POST">
+                    <form class="form" action="{% url 'add_item_to_cart' offer.id %}" method="POST">
+                        {% csrf_token %}
                         <div class="form-row">
-
-
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -90,7 +89,7 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control dark-white-bg qty-input" type="number" name="quantity"
+                                        <input class="form-control dark-white-bg qty-input" type="number" name="qty"
                                             value="1" min="1" max="99" data-item_id="{{ offer.id }}"
                                             id="id_qty_{{ offer.id }}">
                                         <div class="input-group-append">
@@ -116,7 +115,7 @@
                                     class="btn text-white redish-hover redish-bg rounded-0 text-uppercase mt-5"
                                     value="Add to Cart">
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="hidden" name="curr_url" value="{{ request.path }}">
 
                         </div>
                     </form>

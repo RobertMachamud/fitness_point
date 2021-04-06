@@ -183,6 +183,7 @@ header
 span.badge
 {
     border-color: var(--redish) !important;
+    font-weight: 400 !important;
 }
 
 span.badge:hover
