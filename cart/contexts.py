@@ -9,7 +9,7 @@ def cart_content(request):
     items_amt = 0
     cart_total = 0
     cart_items = []
-    curr_taxes_prec = settings.TAXES_PERC
+    curr_taxes_perc = settings.TAXES_PERC
     cart = request.session.get('cart', {})
 
     for item_id, data_item in cart.items():
@@ -20,7 +20,7 @@ def cart_content(request):
             cart_items.append({
                 'item_id': item_id,
                 'qty': data_item,
-                'offer': offer
+                'offer': offer,
             })
         else:
             offer = get_object_or_404(Offer, pk=item_id)
@@ -29,9 +29,9 @@ def cart_content(request):
                 items_amt += data_item
                 cart_items.append({
                     'item_id': item_id,
-                    'qty': qty,
                     'offer': offer,
                     'size': size,
+                    'qty': qty,
                 })
 
     if cart_total < settings.FREE_DEL:
@@ -47,15 +47,15 @@ def cart_content(request):
     price_taxes = ((cart_total + delivery) * settings.TAXES_PERC) / 100
     gr_total = total + price_taxes
 
-    context = {
+    content = {
         'delivery': delivery,
         'gr_total': gr_total,
         'cart_items': cart_items,
         'items_amt': items_amt,
         'for_free_del': for_free_del,
         'free_del': settings.FREE_DEL,
-        # 'price_taxes': price_taxes,
-        'curr_taxes_prec': curr_taxes_prec,
+        'price_taxes': price_taxes,
+        'curr_taxes_perc': curr_taxes_perc,
     }
 
-    return context
+    return content

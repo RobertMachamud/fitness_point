@@ -9,6 +9,17 @@
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
+    const enableDisableBtns = (itemId) => {
+        let currValue = pareseInt()  //
+        let minusDisabl = currValue < 2;
+        let plusDisabl = currValue > 98;
+
+
+    }
+    //
+
+    
+
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){

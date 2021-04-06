@@ -86,7 +86,7 @@
                                             </div>
                                         </form>
                                         <a class="upd-link text-info"><small>Update</small></a>
-                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size="{{ item.item_size }}"><small>Remove</small></a>
+                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 33,55</p>
@@ -153,23 +153,50 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+    // $('.update-link').click(function(e) {
+    //     var form = $(this).prev('.update-form');
+    //     form.submit();
+    // })
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+    // $('.remove-item').click(function(e) {
+    //     var csrfToken = "{{ csrf_token }}";
+    //     var itemId = $(this).attr('id').split('remove_')[1];
+    //     var size = $(this).data('product_size');
+    //     var url = `/bag/remove/${itemId}/`;
+    //     var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
+    //     $.post(url, data)
+    //      .done(function() {
+    //          location.reload();
+    //      });
+    // })
+
+
+    // DOM Variables
+    const updtLink = document.querySelector(".updt-link");
+    const remItem = document.querySelector(".rem-item");
+
+
+    // Updates Quantity by clicking
+    updtLink.addEventListener("click", (e) => {
+        let form = e.target.previousSibling;
+
+        form.submit();
+    });
+
+
+    // Removes Item and reloads by clicking
+    remItem.addEventListener("click", (e) => {
+        let itemId = e.target.id.split('remove_')[1];
+        let item_size = e.target.dataset.item_size
+        let rem_url = `/cart/remove/${itemId}/`;
+        let csrfToken = "{{ csrf_token }}";
 
         $.post(url, data)
          .done(function() {
              location.reload();
          });
-    })
+    });
+
 </script>
 {% endblock %}
