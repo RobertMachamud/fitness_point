@@ -17,6 +17,10 @@ def cart_content(request):
 
     gr_total = cart_total + delivery
 
+    # total = cart_total + delivery
+    # price_taxes = ((cart_total + delivery) * settings.TAXES_PERC) / 100
+    # gr_total = total + price_taxes
+
     context = {
         'delivery': delivery,
         'gr_total': gr_total,
@@ -24,6 +28,7 @@ def cart_content(request):
         'products_atm': products_atm,
         'for_free_del': for_free_del,
         'free_del': settings.FREE_DEL,
+        # 'price_taxes': price_taxes,
     }
 
     return context
