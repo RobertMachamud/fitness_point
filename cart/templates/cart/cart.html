@@ -24,7 +24,7 @@
                {% if cart_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
-                            <thead class="text-black">
+                            <thead class="text-white">
                                 <tr>
                                     <th scope="col"><p class="cart-th lead">Image</p></th>
                                     <th scope="col"><p class="cart-th lead">Name</p></th>
@@ -37,13 +37,13 @@
 <!--                            {% for item in cart_items %}-->
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="woman_weight_squat.jpg">
+                                        <img class="img-fluid rounded" src="{{ item.offer.image.url }}">
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 item-name">PURPLE DUBBELLS 3KG</p>
+                                        <p class="my-0 text-white text-uppercase item-name">{{ item.offer.name }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 46,88</p>
+                                        <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> {{ item.offer.price }}</p>
                                     </td>
                                     <td class="py-3 w-25 pr-5 mobile-qty-td">
                                         <form class="form update-form" method="POST" action="">
@@ -71,7 +71,7 @@
                                                         </button>
                                                     </div>
 <!--
-                                                    {% if item.product.has_sizes %}
+                                                    {% if item.offer.has_sizes %}
                                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                                     {% endif %}
 -->
@@ -79,7 +79,7 @@
                                             </div>
                                         </form>
                                         <a class="upd-link text-info"><small>Update</small></a>
-                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size=""><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 33,55</p>
@@ -87,30 +87,36 @@
                                 </tr>
 <!--                            {% endfor %}-->
                             <tr>
-                                <td colspan="5" class="pt-5 text-right">
+                                <td colspan="5" class="pt-5 text-white text-right">
                                     <!--{{ total|floatformat:2 }}-->
-                                    <h6><strong>Cart Total: $66.,59</strong></h6>
-                                    <h6>Delivery: $5</h6>
-                                    <h6>Taxes: 15%</h6>
+                                    <h6><strong>Cart Total: ${{ cart_total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: ${% if for_free_del > 0 %} {{ delivery }}
+                                         {% else %} 0{% endif %}
+                                    </h6>
+                                    <h6>Taxes: ${{ curr_taxes_prec }}</h6>
                                     <!-- ${{ grand_total|floatformat:2 }}-->
-                                    <h4 class="mt-4"><strong>Your Total: <span class="ml-2 cart-prices redish-color">$490,67</span></strong></h4>
-<!--                                    {% if free_delivery_delta > 0 %}-->
+                                    <h4 class="mt-4"><strong>Your Total: <span class="ml-2 cart-prices redish-color">${{ gr_total|floatformat:2 }}</span></strong></h4>
+                                   {% if for_free_del > 0 %}
                                         <p class="mb-1 redish-color">
-                                            You could get free delivery by spending just <strong>$15,88</strong> more!
+                                            You could get free delivery by spending just <strong>${{ for_free_del }}</strong> more!
                                         </p>
-<!--                                    {% endif %}-->
+                                    {% else %}
+                                        <p class="mb-1 redish-color">
+                                            You've reached ${{ free_del }} so the delivery is <strong class="text-white">FOR FREE!</strong>
+                                        </p>
+                                   {% endif %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right cart-checkout">
                                     <!-- mb-2 -->
-                                    <a href="{% url 'products' %}" class="back-to-shop-btn btn btn-outline-black redish-border rounded-0 btn-lg">
+                                    <a href="{% url 'offers' %}" class="back-to-shop-btn text-white btn btn-outline-black redish-border rounded-0 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">back to shop</span>
+                                        <span class="text-uppercase text-white">back to shop</span>
                                     </a>
-                                    <a href="" class="btn redish-bg redish-hover rounded-0 btn-lg">
+                                    <a href="" class="btn redish-bg text-white redish-hover rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>

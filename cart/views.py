@@ -22,5 +22,4 @@ def add_item_to_cart(request, item_id):
         cart[item_id] = qty
 
     request.session['cart'] = cart
-    print("BBBBBBBBBBBBBBBBBBBBBBBB", request.session['cart'])
     return redirect(curr_url)

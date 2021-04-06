@@ -268,18 +268,20 @@ span.badge:hover
 .cart-th
 {
     margin: 0;
+    color: #fff;
     /* !!!*/
     /* font-weight: 500;*/
 }
 
 .item-name
 {
-    font-size: 1.05em;
+    font-size: 1.03em;
 }
 
 .rem-item
 {
     position: relative;
+    color: red !important;
     cursor: pointer;
 }
 
