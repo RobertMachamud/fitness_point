@@ -136,7 +136,7 @@
                                                 </span>
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="col">
@@ -158,4 +158,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'offers/includes/qty_input_btns_script.html' %}
 {% endblock %}

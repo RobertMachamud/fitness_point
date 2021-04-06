@@ -278,11 +278,20 @@ span.badge:hover
     font-size: 1.03em;
 }
 
+.upd-link,
 .rem-item
 {
-    position: relative;
-    color: red !important;
     cursor: pointer;
+}
+
+.rem-item
+{
+    color: red !important;
+}
+
+.rem-item:hover
+{
+    color: rgba(255,0,0,.5) !important;
 }
 
 .cart-prices

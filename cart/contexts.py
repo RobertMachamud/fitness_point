@@ -13,7 +13,7 @@ def cart_content(request):
     cart = request.session.get('cart', {})
 
     for item_id, data_item in cart.items():
-        if isinstance(data_item, int):   
+        if isinstance(data_item, int):
             offer = get_object_or_404(Offer, pk=item_id)
             cart_total += data_item * offer.price
             items_amt += data_item
@@ -24,14 +24,14 @@ def cart_content(request):
             })
         else:
             offer = get_object_or_404(Offer, pk=item_id)
-            for sz, qty in data_item['items_by_sz'].items():
+            for size, qty in data_item['items_by_sz'].items():
                 cart_total += qty * offer.price
                 items_amt += data_item
                 cart_items.append({
                     'item_id': item_id,
-                    'qty': data_item,
+                    'qty': qty,
                     'offer': offer,
-                    'size': sz,
+                    'size': size,
                 })
 
     if cart_total < settings.FREE_DEL:

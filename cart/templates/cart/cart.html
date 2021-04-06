@@ -56,7 +56,7 @@
                                     </td>
                                     <td class="py-3 w-25 pr-5 mobile-qty-td">
                                         <form class="form update-form" method="POST" action="">
-                                            <!-- {% csrf_token %}-->
+                                            {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group mobile-qty">
                                                     <div class="input-group-prepend">
@@ -80,13 +80,13 @@
                                                         </button>
                                                     </div>
                                                     {% if item.offer.has_sizes %}
-                                                        <input type="hidden" name="item_size" value="{{ item.size }}">
+                                                        <input type="hidden" name="item_size" value="{{ item.item_size }}">
                                                     {% endif %}
                                                 </div>
                                             </div>
                                         </form>
                                         <a class="upd-link text-info"><small>Update</small></a>
-                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size=""><small>Remove</small></a>
+                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size="{{ item.item_size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 33,55</p>
@@ -145,4 +145,31 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'offers/includes/qty_input_btns_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
