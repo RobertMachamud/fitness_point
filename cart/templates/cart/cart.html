@@ -89,7 +89,10 @@
                                         <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> 33,55</p>
+                                        <p class="my-0 cart-prices redish-color">
+                                            <span class="text-white">$</span> 
+                                            {{ item.offer.price | calc_subtotal:item.qty }}
+                                        </p>
                                     </td>
                                 </tr>
                            {% endfor %}
