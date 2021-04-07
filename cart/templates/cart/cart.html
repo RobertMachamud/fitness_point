@@ -11,7 +11,12 @@
 {% endblock %}
 
 {% block content %}
-        <div class="dark-background"></div>
+    <div class="dark-background"></div>
+    <div class="scroll-top-btn btn-left-side shadow-sm rounded-0 border redish-border">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-chevron-up mx-auto my-auto text-white"></i>
+        </a>	
+    </div>
     <div class="container cart-cont mb-2 cart-cont">
         <div class="row">
             <div class="col">
@@ -24,7 +29,7 @@
             <div class="col">
                {% if cart_items %}
                     <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
+                        <table class="table table-sm table-borderless mb-4">
                             <thead class="text-white">
                                 <tr>
                                     <th scope="col"><p class="cart-th lead">Image</p></th>
@@ -86,8 +91,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="upd-link text-info"><small>Update</small></a>
-                                        <a class="rem-item float-right" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="updt-link text-info"><small class="full-height-width">Update</small></a>
+                                        <a class="rem-item float-right pr-5" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><small class="full-height-width">Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 cart-prices redish-color">
@@ -99,13 +104,11 @@
                            {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-white text-right">
-                                    <!--{{ total|floatformat:2 }}-->
                                     <h6><strong>Cart Total: ${{ cart_total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${% if for_free_del > 0 %} {{ delivery }}
+                                    <h6>Delivery: ${% if for_free_del > 0 %} {{ delivery|floatformat:2 }}
                                          {% else %} 0{% endif %}
                                     </h6>
-                                    <h6>Taxes: ${{ curr_taxes_prec }}</h6>
-                                    <!-- ${{ grand_total|floatformat:2 }}-->
+                                    <h6>Taxes: % {{ curr_taxes_perc }}</h6>
                                     <h4 class="mt-4"><strong>Your Total: <span class="ml-2 cart-prices redish-color">${{ gr_total|floatformat:2 }}</span></strong></h4>
                                    {% if for_free_del > 0 %}
                                         <p class="mb-1 redish-color">
@@ -177,30 +180,33 @@
 
 
     // DOM Variables
-    const updtLink = document.querySelector(".updt-link");
-    const remItem = document.querySelector(".rem-item");
+    const updtLink = document.querySelectorAll(".updt-link");
+    const remItems = document.querySelectorAll(".rem-item");
 
 
     // Updates Quantity by clicking
-    updtLink.addEventListener("click", (e) => {
-        let form = e.target.previousSibling;
+    updtLink.forEach(u => u.addEventListener("click", (e) => {
+        let form = e.target.parentElement.previousSibling.previousElementSibling;
 
         form.submit();
-    });
+    }));
 
 
     // Removes Item and reloads by clicking
-    remItem.addEventListener("click", (e) => {
-        let itemId = e.target.id.split('remove_')[1];
+    remItems.forEach(r => r.firstElementChild.addEventListener("click", (e) => {
+        let itemId = e.target.parentElement.id.split('remove_')[1];
         let item_size = e.target.dataset.item_size
         let rem_url = `/cart/remove/${itemId}/`;
         let csrfToken = "{{ csrf_token }}";
 
-        $.post(url, data)
+        let data = {'csrfmiddlewaretoken': csrfToken, 'product_sz': item_size};
+
+        $.post(rem_url, data)
          .done(function() {
              location.reload();
          });
-    });
+    }));
+
 
 </script>
 {% endblock %}

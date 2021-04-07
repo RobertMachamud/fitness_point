@@ -162,6 +162,14 @@ header
     z-index: 9999999;
 }
 
+/* Scroll Btn on left side */
+.scroll-top-btn.btn-left-side
+{
+    left: 3%;
+    right: auto;
+    bottom: 1.5rem;
+}
+
 /* Background to overlay image */
 .dark-background
 {
@@ -278,9 +286,18 @@ span.badge:hover
     font-size: 1.03em;
 }
 
-.upd-link,
+/* Update/Remove Item Btns */
+.full-height-width
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.updt-link,
 .rem-item
 {
+    position: relative;
     cursor: pointer;
 }
 
@@ -334,6 +351,11 @@ span.badge:hover
         width: 30px;
         font-size: .9em;
     }
+
+    .rem-item
+    {
+        padding-right: 2rem !important
+    }
 }
 
 
@@ -344,3 +366,6 @@ span.badge:hover
         margin-bottom: .5em;
     }
 }
+
+
+/* 1. scroll to top button - find solution to avoid error if there is no btn on this page. otherwise always render on every page... */

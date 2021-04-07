@@ -155,6 +155,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-FREE_DEL = 45
-DEL_COSTS = 5
-TAXES_PERC = 15
+FREE_DEL = 75
+TAXES_PERC = 9
+DEL_COSTS = 5.99

@@ -35,7 +35,7 @@ def cart_content(request):
                 })
 
     if cart_total < settings.FREE_DEL:
-        delivery = cart_total + Decimal(settings.DEL_COSTS)
+        delivery = Decimal(settings.DEL_COSTS)
         for_free_del = settings.FREE_DEL - cart_total
     else:
         delivery = 0
@@ -50,6 +50,7 @@ def cart_content(request):
     content = {
         'delivery': delivery,
         'gr_total': gr_total,
+        'cart_total': cart_total,
         'cart_items': cart_items,
         'items_amt': items_amt,
         'for_free_del': for_free_del,
