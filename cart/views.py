@@ -27,15 +27,24 @@ def add_item_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if item_size in cart[item_id]['items_by_sz'].keys():
                 cart[item_id]['items_by_sz'][item_size] += qty
+                messages.success(
+                    request, f'Updated size {item_size.upper()} {offer.name} quantity to {cart[item_id]["items_by_sz"][item_size]}')
             else:
                 cart[item_id]['items_by_sz'][item_size] = qty
+                messages.success(
+                    request, f'Added size {item_size.upper()} {offer.name} to your cart')
         else:
             cart[item_id] = {'items_by_sz': {item_size: qty}}
+            messages.success(
+                request, f'Added size {item_size.upper()} {offer.name} to your cart')
     elif not item_size:
         if item_id in list(cart.keys()):
             cart[item_id] += qty
+            messages.success(
+                request, f'Updated {offer.name} quantity to {cart[item_id]}')
         else:
             cart[item_id] = qty
+            messages.success(request, f'Added {offer.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(curr_url)
@@ -102,6 +111,6 @@ def rem_from_cart(request, item_id):
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
-    except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
+    except Exception as err:
+        messages.error(request, f'Error removing item: {err}')
         return HttpResponse(status=500)
