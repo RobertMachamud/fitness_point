@@ -160,22 +160,9 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    // $('.update-link').click(function(e) {
+    // $('.updt-link').click(function(e) {
     //     var form = $(this).prev('.update-form');
     //     form.submit();
-    // })
-
-    // $('.remove-item').click(function(e) {
-    //     var csrfToken = "{{ csrf_token }}";
-    //     var itemId = $(this).attr('id').split('remove_')[1];
-    //     var size = $(this).data('product_size');
-    //     var url = `/bag/remove/${itemId}/`;
-    //     var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
-
-    //     $.post(url, data)
-    //      .done(function() {
-    //          location.reload();
-    //      });
     // })
 
 
@@ -199,7 +186,7 @@
         let rem_url = `/cart/remove/${itemId}/`;
         let csrfToken = "{{ csrf_token }}";
 
-        let data = {'csrfmiddlewaretoken': csrfToken, 'product_sz': item_size};
+        let data = {'csrfmiddlewaretoken': csrfToken, 'items_by_sz': item_size};
 
         $.post(rem_url, data)
          .done(function() {

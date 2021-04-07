@@ -48,14 +48,14 @@ def cart_content(request):
     gr_total = total + price_taxes
 
     content = {
-        'delivery': delivery,
         'gr_total': gr_total,
-        'cart_total': cart_total,
-        'cart_items': cart_items,
+        'delivery': delivery,
         'items_amt': items_amt,
+        'cart_items': cart_items,
+        'cart_total': cart_total,
+        'price_taxes': price_taxes,
         'for_free_del': for_free_del,
         'free_del': settings.FREE_DEL,
-        'price_taxes': price_taxes,
         'curr_taxes_perc': curr_taxes_perc,
     }
 

@@ -11,6 +11,11 @@
 
 {% block content %}
     <div class="dark-background"></div>
+    <div class="scroll-top-btn d-none no-pointer-events">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-chevron-up mx-auto my-auto text-white"></i>
+        </a>	
+    </div>
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="white-hr w-50"></div>
@@ -81,7 +86,7 @@
                             {% if sz and not sh %}
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_size" id="id_product_size">
+                                    <select class="form-control rounded-0 w-50" name="item_size" id="id_item_size">
                                         <option value="xs">XS</option>
                                         <option value="s">S</option>
                                         <option value="m" selected>M</option>
@@ -92,7 +97,7 @@
                             {% elif sz and sh %}
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_size" id="id_product_size_shoes">
+                                    <select class="form-control rounded-0 w-50" name="item_size" id="id_item_size_shoes">
                                         <option value="6">6</option>
                                         <option value="6.5">6.5</option>
                                         <option value="7">7</option>
@@ -118,10 +123,10 @@
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decr-qty btn redish-bg rounded-0" data-item_id="{{ offer.id }}"
+                                            <button class="decr-qty-btn btn redish-bg rounded-0" data-item_id="{{ offer.id }}"
                                                 id="decr-qty_{{ offer.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
+                                                <span class="icon no-pointer-events">
+                                                    <i class="fas fa-minus no-pointer-events"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -129,10 +134,10 @@
                                             value="1" min="1" max="99" data-item_id="{{ offer.id }}"
                                             id="id_qty_{{ offer.id }}">
                                         <div class="input-group-append">
-                                            <button class="incr-qty btn redish-bg rounded-0" data-item_id="{{ offer.id }}"
+                                            <button class="incr-qty-btn btn redish-bg rounded-0" data-item_id="{{ offer.id }}"
                                                 id="incr-qty_{{ offer.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
+                                                <span class="icon no-pointer-events">
+                                                    <i class="fas fa-plus no-pointer-events"></i>
                                                 </span>
                                             </button>
                                         </div>
