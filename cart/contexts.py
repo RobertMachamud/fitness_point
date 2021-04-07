@@ -26,7 +26,7 @@ def cart_content(request):
             offer = get_object_or_404(Offer, pk=item_id)
             for size, qty in data_item['items_by_sz'].items():
                 cart_total += qty * offer.price
-                items_amt += data_item
+                items_amt += qty
                 cart_items.append({
                     'item_id': item_id,
                     'offer': offer,
