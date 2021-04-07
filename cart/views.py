@@ -18,6 +18,7 @@ def add_item_to_cart(request, item_id):
     qty = int(request.POST.get('qty'))
     cart = request.session.get('cart', {})
     curr_url = request.POST.get('curr_url')
+    offer = get_object_or_404(Offer, pk=item_id)
 
     if 'item_size' in request.POST:
         item_size = request.POST['item_size']
@@ -66,21 +67,21 @@ def adj_cart(request, item_id):
         if qty > 0:
             cart[item_id]['items_by_sz'][item_size] = qty
             messages.success(
-                request, f'Updated size {item_size.upper()} {offer.name} quantity to {cart[item_id]["items_by_sz"][item_size]}')
+                request, f'Updated size {item_size.upper()} {offer.name.upper().upper()} quantity to {cart[item_id]["items_by_sz"][item_size]}')
         else:
             del cart[item_id]['items_by_sz'][item_size]
             if not cart[item_id]['items_by_sz']:
                 cart.pop(item_id)
             messages.success(
-                request, f'Removed size {item_size.upper()} {offer.name} from your cart')
+                request, f'Removed size {item_size.upper()} {offer.name.upper()} from your cart')
     else:
         if qty > 0:
             cart[item_id] = qty
             messages.success(
-                request, f'Updated {offer.name} quantity to {cart[item_id]}')
+                request, f'Updated {offer.name.upper()} quantity to {cart[item_id]}')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {offer.name} from your cart')
+            messages.success(request, f'Removed {offer.name.upper()} from your cart')
 
     request.session['cart'] = cart
     return redirect(reverse('to_cart'))
@@ -103,10 +104,10 @@ def rem_from_cart(request, item_id):
             if not cart[item_id]['items_by_sz']:
                 cart.pop(item_id)
             messages.success(
-                request, f'Removed size {item_size.upper()} {offer.name} from your cart')
+                request, f'Removed size {item_size.upper()} {offer.name.upper()} from your cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {offer.name} from your cart')
+            messages.success(request, f'Removed {offer.name.upper()} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
