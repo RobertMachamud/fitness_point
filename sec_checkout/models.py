@@ -74,5 +74,6 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
 
+    # Not sure to include it 
     # def __str__(self):
     #     return f'SKU {self.offer.sku} on order {self.order.order_nr}'
