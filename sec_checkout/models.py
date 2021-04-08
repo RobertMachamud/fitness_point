@@ -1,4 +1,5 @@
 import uuid
+from decimal import Decimal
 from django.db import models
 from offers.models import Offer
 from django.db.models import Sum
@@ -41,7 +42,7 @@ class Order(models.Model):
             self.delivery = settings.DEL_COSTS
         else:
             self.delivery = 0
-        self.gr_total = self.order_total + self.delivery
+        self.gr_total = self.order_total + Decimal(self.delivery)
         self.save()
 
     def save(self, *args, **kwargs):

@@ -29,23 +29,23 @@ def sec_checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            for item_id, item_data in cart.items():
+            for item_id, data_item in cart.items():
                 try:
                     offer = Offer.objects.get(id=item_id)
-                    if isinstance(item_data, int):
+                    if isinstance(data_item, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             offer=offer,
-                            qty=item_data,
+                            qty=data_item,
                         )
                         order_line_item.save()
                     else:
-                        for sz, qty in item_data['items_by_size'].items():
+                        for sz, qty in data_item['items_by_sz'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 offer=offer,
                                 qty=qty,
-                                item_sz=sz,
+                                offer_sz=sz,
                             )
                             order_line_item.save()
                 except Offer.DoesNotExist:
@@ -59,7 +59,7 @@ def sec_checkout(request):
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(
-                reverse('checkout_successful', args=[order.order_number]))
+                reverse('checkout_successful', args=[order.order_nr]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -94,14 +94,14 @@ def sec_checkout(request):
     return render(request, template, content)
 
 
-def checkout_successful(request, order_number):
+def checkout_successful(request, order_nr):
 
     """ Handles successful checkouts """
 
     save_info = request.session.get('save-info')
-    order = get_object_or_404(Order, order_number=order_number)
+    order = get_object_or_404(Order, order_nr=order_nr)
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
+        Your order number is {order_nr}. A confirmation \
         email will be sent to {order.email}. Thank You!')
 
     if 'cart' in request.session:
