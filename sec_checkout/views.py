@@ -11,8 +11,10 @@ def sec_checkout(request):
 
     order_form = OrderForm()
     template = 'sec_checkout/sec_checkout.html'
-    context = {
+    content = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_0SMREd7Vdweb1MGRi8S0EycR00JVzSAs5O',
+        'client_secret': 'test secret',
     }
 
-    return render(request, template, context)
+    return render(request, template, content)

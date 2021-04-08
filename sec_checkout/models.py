@@ -1,5 +1,4 @@
 import uuid
-
 from django.db import models
 from offers.models import Offer
 from django.db.models import Sum
@@ -18,10 +17,12 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    delivery = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    gr_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-
+    delivery = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+    gr_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
 
     def _generate_order_nr(self):
 
@@ -29,10 +30,10 @@ class Order(models.Model):
 
         return uuid.uuid4().hex.upper()
 
-
     def update_total(self):
 
-        """ Updates grand total each time a line item is added, accounting for delivery costs. """
+        """ Updates grand total each time a line item is added,
+        accounting for delivery costs. """
 
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum']
@@ -43,7 +44,6 @@ class Order(models.Model):
         self.gr_total = self.order_total + self.delivery
         self.save()
 
-
     def save(self, *args, **kwargs):
 
         """ Overrides the original save method to set the order number
@@ -53,7 +53,6 @@ class Order(models.Model):
             self.order_nr = self._generate_order_nr()
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.order_nr
 
@@ -61,9 +60,12 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     qty = models.IntegerField(null=False, blank=False, default=0)
     offer_sz = models.CharField(max_length=4, null=True, blank=True)
-    offer = models.ForeignKey(Offer, null=False, blank=False, on_delete=models.CASCADE)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    offer = models.ForeignKey(
+        Offer, null=False, blank=False, on_delete=models.CASCADE)
+    lineitem_total = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    order = models.ForeignKey(
+        Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
 
     def save(self, *args, **kwargs):
 
