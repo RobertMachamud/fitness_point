@@ -7,6 +7,9 @@ from cart.contexts import cart_content
 
 
 def sec_checkout(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+
     cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "There's nothing in your cart")
@@ -16,14 +19,23 @@ def sec_checkout(request):
     gr_total = curr_cart['gr_total']
     stripe_total = round(gr_total * 100)
 
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
     order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            You probably forgot to set it in your environment.')
+
     template = 'sec_checkout/sec_checkout.html'
     content = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_0SMREd7Vdweb1MGRi8S0EycR00JVzSAs5O',
-        'client_secret': 'test secret',
+        'stripe_public_key': 'stripe_public_key',
+        'client_secret': 'intent.client_secret',
     }
 
     return render(request, template, content)
-
-# installed stripe, added keys for stripe to settings and upd js"
