@@ -1,6 +1,9 @@
+import stripe
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 from .forms import OrderForm
+from cart.contexts import cart_content
 
 
 def sec_checkout(request):
@@ -8,6 +11,10 @@ def sec_checkout(request):
     if not cart:
         messages.error(request, "There's nothing in your cart")
         return redirect(reverse('offers'))
+
+    curr_cart = cart_content(request)
+    gr_total = curr_cart['gr_total']
+    stripe_total = round(gr_total * 100)
 
     order_form = OrderForm()
     template = 'sec_checkout/sec_checkout.html'
@@ -18,3 +25,5 @@ def sec_checkout(request):
     }
 
     return render(request, template, content)
+
+# installed stripe, added keys for stripe to settings and upd js"
