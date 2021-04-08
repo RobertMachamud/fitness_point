@@ -79,7 +79,7 @@
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded px-3 mb-3">
                         <legend class="fieldset-label small px-2 w-auto text-uppercase">Delivery</legend>
                         {{ order_form.phone_nr | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
@@ -94,14 +94,14 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_signup' %}">create an Account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">Login</a> to save your data
                                 </label>
 							{% endif %}
 						</div>
                     </fieldset>
                     <fieldset class="px-3">
-                        <legend class="fieldset-label small px-2 w-auto">Payment</legend>
+                        <legend class="fieldset-label small px-2 w-auto text-uppercase">Payment</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
 
@@ -109,24 +109,26 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'to_cart' %}" class="btn btn-outline-black rounded-0">
+                    <div class="submit-button text-right my-5 pr-3">                    
+						<a href="{% url 'to_cart' %}" class="btn redish-border rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Cart</span>
 						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
+						<button id="submit-button" class="btn redish-bg redish-hover rounded-0">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
 						</button>
-						<p class="small text-danger my-0">
+						<p class="small text-danger mt-2">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ gr_total|floatformat:2 }}</strong></span>
+                            <span class="redish-color">
+                                Your card will be charged <strong class="text-white">${{ gr_total|floatformat:2 }}</strong>
+                            </span>
 						</p>
 					</div>
                 </form>

@@ -18,10 +18,10 @@ def sec_checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            'phone_nr': request.POST['phone_number'],
+            'phone_nr': request.POST['phone_nr'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
-            'city': request.POST['town_or_city'],
+            'city': request.POST['city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
@@ -71,8 +71,8 @@ def sec_checkout(request):
             return redirect(reverse('offers'))
 
         curr_cart = cart_content(request)
-        total = curr_cart['gr_total']
-        stripe_total = round(total * 100)
+        gr_total = curr_cart['gr_total']
+        stripe_total = round(gr_total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
@@ -94,7 +94,7 @@ def sec_checkout(request):
     return render(request, template, content)
 
 
-def checkout_success(request, order_number):
+def checkout_successful(request, order_number):
 
     """ Handles successful checkouts """
 
@@ -107,7 +107,7 @@ def checkout_success(request, order_number):
     if 'cart' in request.session:
         del request.session['cart']
 
-    template = 'checkout/checkout_success.html'
+    template = 'sec_checkout/checkout_successful.html'
     content = {
         'order': order,
     }
