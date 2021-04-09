@@ -41,7 +41,9 @@ def cart_content(request):
         delivery = 0
         for_free_del = 0
 
-    # gr_total = cart_total + delivery
+    if cart_total == 0:
+        delivery = 0
+        for_free_del = 0
 
     total = cart_total + delivery
     price_taxes = ((cart_total + delivery) * settings.TAXES_PERC) / 100

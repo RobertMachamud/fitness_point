@@ -393,6 +393,14 @@ span.badge:hover
 }
 
 
+/* ------------------------------------------------------------------ SECRURE CHECKOUT */
+
+.order-confirmation-wrapper
+{
+    border: var(--redish);
+}
+
+
 /* ------------------------------------------------------------------ MEDIA QUERIES */
 
 @media only screen and (max-width: 800px)
@@ -443,5 +451,3 @@ span.badge:hover
     }
 }
 
-
-/* 1. scroll to top button - find solution to avoid error if there is no btn on this page. otherwise always render on every page... */

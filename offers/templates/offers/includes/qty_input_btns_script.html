@@ -4,22 +4,8 @@
     const incrQtyBtn = document.querySelector(".incr-qty-btn");
     const decrQtyBtn = document.querySelector(".decr-qty-btn");
 
-    allQtyInputs.forEach(qtyInput => {
-        let itemId = qtyInput.dataset.item_id;
 
-        enableDisableBtns(itemId);
-    });
-
-
-    allQtyInputs.forEach(qtyInput => {
-        qtyInput.addEventListener("change", () => {
-            let itemId = qtyInput.dataset.item_id;
-
-            enableDisableBtns(itemId);
-        });
-    });
-
-
+    // Enables Buttons if value is over 98 or lower than 2
     const enableDisableBtns = (itemId) => {
         const incrQty = document.querySelector(`#incr-qty_${itemId}`);
         const decrQty = document.querySelector(`#decr-qty_${itemId}`);
@@ -32,6 +18,24 @@
         plusDisabl ? incrQty.disabled = true : incrQty.disabled = false;
         minusDisabl ? decrQty.disabled = true : decrQty.disabled = false;
     }
+
+
+    // Event Listener for + Button
+    allQtyInputs.forEach(qtyInput => {
+        let itemId = qtyInput.dataset.item_id;
+
+        enableDisableBtns(itemId);
+    });
+
+
+    // Event Listener for - Button
+    allQtyInputs.forEach(qtyInput => {
+        qtyInput.addEventListener("change", () => {
+            let itemId = qtyInput.dataset.item_id;
+
+            enableDisableBtns(itemId);
+        });
+    });
 
 
     incrQtyBtn.addEventListener("click", (e) => {
