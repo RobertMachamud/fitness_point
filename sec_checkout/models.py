@@ -4,10 +4,13 @@ from django.db import models
 from offers.models import Offer
 from django.db.models import Sum
 from django.conf import settings
+from user_profiles.models import UserProfile
 from django_countries.fields import CountryField
 
 
 class Order(models.Model):
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
     order_nr = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
