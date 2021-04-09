@@ -24,6 +24,9 @@ class Order(models.Model):
         max_digits=10, decimal_places=2, null=False, default=0)
     gr_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
+    original_cart = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default='')
 
     def _generate_order_nr(self):
 
@@ -60,7 +63,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     qty = models.IntegerField(null=False, blank=False, default=0)
-    offer_sz = models.CharField(max_length=4, null=True, blank=True)
+    item_sz = models.CharField(max_length=4, null=True, blank=True)
     offer = models.ForeignKey(
         Offer, null=False, blank=False, on_delete=models.CASCADE)
     lineitem_total = models.DecimalField(
