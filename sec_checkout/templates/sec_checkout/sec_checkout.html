@@ -89,11 +89,11 @@
                     <fieldset class="rounded px-3 mb-3">
                         <legend class="fieldset-label small px-2 w-auto text-uppercase">Delivery</legend>
                         {{ order_form.phone_nr | as_crispy_field }}
-                        {{ order_form.country | as_crispy_field }}
-                        {{ order_form.postcode | as_crispy_field }}
-                        {{ order_form.city | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.city | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
                         {{ order_form.county | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}

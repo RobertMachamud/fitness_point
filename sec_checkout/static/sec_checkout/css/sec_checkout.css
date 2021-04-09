@@ -3,6 +3,18 @@
     color: #fff;
 }
 
+select,
+select option
+{
+    color: #000;
+}
+
+select:invalid,
+select option[value=""]
+{
+    color: #aab7c4 !important;
+}
+
 .StripeElement,
 .stripe-style-input 
 {
