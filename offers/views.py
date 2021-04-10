@@ -76,9 +76,9 @@ def add_offer(request):
     if request.method == 'POST':
         form = OfferForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            offer = form.save()
             messages.success(request, 'Successfully added new offer!')
-            return redirect(reverse('add_offer'))
+            return redirect(reverse('offer_details', args=[offer.id]))
         else:
             messages.error(
                 request, 'Failed to add the offer. \
@@ -118,3 +118,13 @@ def upd_offer(request, offer_id):
         'offer': offer,
     }
     return render(request, template, content)
+
+
+def del_offer(request, offer_id):
+
+    """ Deletes an offer from the store """
+
+    offer = get_object_or_404(Offer, pk=offer_id)
+    offer.delete()
+    messages.success(request, 'offer deleted!')
+    return redirect(reverse('offers'))

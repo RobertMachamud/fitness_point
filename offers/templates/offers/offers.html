@@ -124,6 +124,12 @@
                                                     {% endif %}
                                                 </a>
                                             </div>
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'upd_offer' offer.id %}">Update</a> | 
+                                                    <a class="text-danger" href="{% url 'del_offer' offer.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
