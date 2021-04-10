@@ -73,9 +73,48 @@ def add_offer(request):
 
     """ Adds an offer to the store """
 
-    form = OfferForm()
+    if request.method == 'POST':
+        form = OfferForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added new offer!')
+            return redirect(reverse('add_offer'))
+        else:
+            messages.error(
+                request, 'Failed to add the offer. \
+                Please ensure the form is valid.')
+    else:
+        form = OfferForm()
+
     template = 'offers/add_offer.html'
     content = {
         'form': form,
+    }
+    return render(request, template, content)
+
+
+def upd_offer(request, offer_id):
+
+    """ Edits an offer in the store """
+
+    offer = get_object_or_404(Offer, pk=offer_id)
+    if request.method == 'POST':
+        form = OfferForm(request.POST, request.FILES, instance=offer)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated the offer!')
+            return redirect(reverse('offer_detail', args=[offer.id]))
+        else:
+            messages.error(
+                request, 'Failed to update the offer. \
+                Please ensure the form is valid.')
+    else:
+        form = OfferForm(instance=offer)
+        messages.info(request, f'You are updating: {offer.name}')
+
+    template = 'offers/upd_offer.html'
+    content = {
+        'form': form,
+        'offer': offer,
     }
     return render(request, template, content)

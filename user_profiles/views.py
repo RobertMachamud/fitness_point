@@ -1,5 +1,6 @@
 
 from django.shortcuts import render, get_object_or_404
+from sec_checkout.models import Order
 from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -16,8 +17,12 @@ def user_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
+        else:
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
+    else:
+        form = UserProfileForm(instance=user_profile)
 
-    form = UserProfileForm(instance=user_profile)
     orders = user_profile.orders.all()
 
     template = 'user_profiles/user_profile.html'
