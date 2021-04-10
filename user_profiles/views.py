@@ -1,4 +1,4 @@
-
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from sec_checkout.models import Order
 from django.contrib import messages
@@ -6,6 +6,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 
+@login_required
 def user_profile(request):
 
     """ Displays the user's profile. """
@@ -29,7 +30,7 @@ def user_profile(request):
     content = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
     }
     return render(request, template, content)
 

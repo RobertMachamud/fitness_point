@@ -70,6 +70,7 @@ def offer_details(request, offer_id):
     return render(request, 'offers/offer_details.html', content)
 
 
+@login_required
 def add_offer(request):
 
     """ Adds an offer to the store (superuser) """
@@ -98,6 +99,7 @@ def add_offer(request):
     return render(request, template, content)
 
 
+@login_required
 def upd_offer(request, offer_id):
 
     """ Edits an offer in the store (superuser) """
@@ -129,6 +131,7 @@ def upd_offer(request, offer_id):
     return render(request, template, content)
 
 
+@login_required
 def del_offer(request, offer_id):
 
     """ Deletes an offer from the store (superuser) """
