@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Offer, Category
 from django.db.models.functions import Lower
+from .forms import OfferForm
 
 
 def all_offers(request):
@@ -66,3 +67,15 @@ def offer_details(request, offer_id):
         'offer': offer,
     }
     return render(request, 'offers/offer_details.html', content)
+
+
+def add_offer(request):
+
+    """ Adds an offer to the store """
+
+    form = OfferForm()
+    template = 'offers/add_offer.html'
+    content = {
+        'form': form,
+    }
+    return render(request, template, content)
