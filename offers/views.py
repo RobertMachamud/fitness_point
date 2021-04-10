@@ -1,4 +1,5 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from .models import Offer, Category
@@ -71,7 +72,11 @@ def offer_details(request, offer_id):
 
 def add_offer(request):
 
-    """ Adds an offer to the store """
+    """ Adds an offer to the store (superuser) """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do this.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = OfferForm(request.POST, request.FILES)
@@ -95,7 +100,11 @@ def add_offer(request):
 
 def upd_offer(request, offer_id):
 
-    """ Edits an offer in the store """
+    """ Edits an offer in the store (superuser) """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do this.')
+        return redirect(reverse('home'))
 
     offer = get_object_or_404(Offer, pk=offer_id)
     if request.method == 'POST':
@@ -122,7 +131,11 @@ def upd_offer(request, offer_id):
 
 def del_offer(request, offer_id):
 
-    """ Deletes an offer from the store """
+    """ Deletes an offer from the store (superuser) """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do this.')
+        return redirect(reverse('home'))
 
     offer = get_object_or_404(Offer, pk=offer_id)
     offer.delete()
