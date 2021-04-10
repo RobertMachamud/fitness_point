@@ -61,7 +61,7 @@
                                         <p class="my-0 cart-prices redish-color"><span class="text-white">$</span> {{ item.offer.price }}</p>
                                     </td>
                                     <td class="py-3 w-25 pr-5 mobile-qty-td">
-                                        <form class="form update-form" method="POST" action="{% url 'adj_cart' item.item_id  %}}">
+                                        <form class="form update-form" method="POST" action="{% url 'adj_cart' item.item_id  %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group mobile-qty">
@@ -69,7 +69,7 @@
                                                         <button class="decrement-qty btn btn-sm redish-bg redish-hover rounded-0" 
                                                             data-item_id="{{ item.item_id }}" id="decr-qty_{{ item.item_id }}">
                                                             <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
+                                                                <i class="fas fa-minus fa-sm no-pointer-events"></i>
                                                             </span>
                                                         </button>
                                                     </div>
@@ -81,18 +81,18 @@
                                                         <button class="increment-qty btn btn-sm redish-bg redish-hover rounded-0"
                                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
+                                                                <i class="fas fa-plus fa-sm no-pointer-events"></i>
                                                             </span>
                                                         </button>
                                                     </div>
                                                     {% if item.offer.has_sizes %}
-                                                        <input type="hidden" name="item_size" value="{{ item.item_size }}">
+                                                        <input type="hidden" name="item_sz" value="{{ item.item_sz }}">
                                                     {% endif %}
                                                 </div>
                                             </div>
                                         </form>
                                         <a class="updt-link text-info"><small class="full-height-width">Update</small></a>
-                                        <a class="rem-item float-right pr-5" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><small class="full-height-width">Remove</small></a>
+                                        <a class="rem-item float-right pr-5" id="remove_{{ item.item_id }}" data-item_sz="{{ item.size }}"><small class="full-height-width">Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 cart-prices redish-color">
@@ -182,14 +182,14 @@
     // Removes Item and reloads by clicking
     remItems.forEach(r => r.firstElementChild.addEventListener("click", (e) => {
         let itemId = e.target.parentElement.id.split('remove_')[1];
-        let item_size = e.target.dataset.item_size
+        let item_sz = e.target.dataset.item_sz
         let rem_url = `/cart/remove/${itemId}/`;
         let csrfToken = "{{ csrf_token }}";
 
-        let data = {'csrfmiddlewaretoken': csrfToken, 'items_by_sz': item_size};
+        let data = {'csrfmiddlewaretoken': csrfToken, 'items_by_sz': item_sz};
 
         $.post(rem_url, data)
-         .done(function() {
+         .done(() => {
              location.reload();
          });
     }));

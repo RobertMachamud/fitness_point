@@ -1,8 +1,8 @@
 <script type="text/javascript">
 
     const allQtyInputs = document.querySelectorAll(".qty-input");
-    const incrQtyBtn = document.querySelector(".incr-qty-btn");
-    const decrQtyBtn = document.querySelector(".decr-qty-btn");
+    const incrQtyBtn = document.querySelectorAll(".incr-qty-btn");
+    const decrQtyBtn = document.querySelectorAll(".decr-qty-btn");
 
 
     // Enables Buttons if value is over 98 or lower than 2
@@ -38,26 +38,31 @@
     });
 
 
-    incrQtyBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        let itemId = e.target.dataset.item_id;
-        let closeInput = e.target.closest('.input-group').querySelectorAll('.qty-input')[0];
-        let currValue = parseInt(closeInput.value);
+    incrQtyBtn.forEach(incrBtn => {
+        incrBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            let itemId = e.target.dataset.item_id;
+            let closeInput = e.target.closest('.input-group').querySelectorAll('.qty-input')[0];
+            let currValue = parseInt(closeInput.value);
 
-        closeInput.value = currValue + 1;
-        enableDisableBtns(itemId);
+            closeInput.value = currValue + 1;
+            enableDisableBtns(itemId);
+        });
     });
+    
 
+    decrQtyBtn.forEach(decrBtn => {
+        decrBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            let itemId = e.target.dataset.item_id;
+            let closeInput = e.target.closest('.input-group').querySelectorAll('.qty-input')[0];
+            let currValue = parseInt(closeInput.value);
 
-    decrQtyBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        let itemId = e.target.dataset.item_id;
-        let closeInput = e.target.closest('.input-group').querySelectorAll('.qty-input')[0];
-        let currValue = parseInt(closeInput.value);
-
-        closeInput.value = currValue - 1;
-        enableDisableBtns(itemId);
+            closeInput.value = currValue - 1;
+            enableDisableBtns(itemId);
+        });
     });
+    
 
 
 </script>
