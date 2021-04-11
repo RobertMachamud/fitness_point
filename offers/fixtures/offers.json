@@ -49,7 +49,7 @@
             "category": 3,
             "day_one": "wednesday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "10:00am",
             "time_two": "7:00pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -106,7 +106,7 @@
             "category": 6,
             "day_one": "thursday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "11:00am",
             "time_two": "6:00pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -125,7 +125,7 @@
             "category": 7,
             "day_one": "tuesday",
             "day_two": "saturday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "3:00pm",
             "time_two": "6:30pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -220,7 +220,7 @@
             "category": 11,
             "day_one": "thursday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "11:00am",
             "time_two": "6:00pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -239,7 +239,7 @@
             "category": 1,
             "day_one": "thursday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "12:00pm",
             "time_two": "5:35pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -258,7 +258,7 @@
             "category": 5,
             "day_one": "wednesday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "12:00am",
             "time_two": "5:30pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -277,7 +277,7 @@
             "category": 5,
             "day_one": "thursday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "11:00am",
             "time_two": "6:00pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -326,7 +326,7 @@
         "pk": 18,
         "model": "offers.offer",
         "fields": {
-            "name": "gray nikes",
+            "name": "vintage nikes",
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -338,7 +338,7 @@
             "time_one": "",
             "time_two": "",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "gray_nikes.jpg"
+            "image": "vintage_nikes_red_blue.jpg"
         }
     },
     {
@@ -391,7 +391,7 @@
             "category": 12,
             "day_one": "monday",
             "day_two": "thursday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "9:20am",
             "time_two": "2:40pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -410,7 +410,7 @@
             "category": 2,
             "day_one": "monday",
             "day_two": "thursday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "9:20am",
             "time_two": "2:40pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -448,7 +448,7 @@
             "category": 12,
             "day_one": "monday",
             "day_two": "thursday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "9:20am",
             "time_two": "2:40pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -467,7 +467,7 @@
             "category": 3,
             "day_one": "monday",
             "day_two": "thursday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "12:00pm",
             "time_two": "8:15pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -524,7 +524,7 @@
             "category": 2,
             "day_one": "tuesday",
             "day_two": "saturday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "11:55am",
             "time_two": "4:50pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -543,7 +543,7 @@
             "category": 2,
             "day_one": "monday",
             "day_two": "wednesday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "12:35pm",
             "time_two": "5:50pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -600,7 +600,7 @@
             "category": 7,
             "day_one": "monday",
             "day_two": "friday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "4:10pm",
             "time_two": "6:50pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -657,7 +657,7 @@
             "category": 3,
             "day_one": "monday",
             "day_two": "saturday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "6:45am",
             "time_two": "8:30pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -676,11 +676,11 @@
             "category": 2,
             "day_one": "monday",
             "day_two": "friday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "11:15am",
             "time_two": "6:45pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "spinning_bike.jpg"
+            "image": "spinning_cycle_legs_sport.jpg"
         }
     },
     {
@@ -714,7 +714,7 @@
             "category": 7,
             "day_one": "saturday",
             "day_two": "thursday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "9:50am",
             "time_two": "6:50pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -733,7 +733,7 @@
             "category": 1,
             "day_one": "monday",
             "day_two": "sunday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "6:50am",
             "time_two": "8:50pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -771,7 +771,7 @@
             "category": 2,
             "day_one": "monday",
             "day_two": "saturday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "12:50pm",
             "time_two": "2:50pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -790,7 +790,7 @@
             "category": 7,
             "day_one": "tuesday",
             "day_two": "saturday",
-            "day_span": "trough",
+            "day_span": "through",
             "time_one": "7:40pm",
             "time_two": "2:20pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -881,7 +881,7 @@
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime praesentium. Autem debitis laborum assumenda nobi earum.",
-            "price": 29.39,
+            "price": 129.39,
             "category": 9,
             "day_one": "",
             "day_two": "",
@@ -946,7 +946,7 @@
             "time_one": "4:00pm",
             "time_two": "7:15pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "wraped_fist_boxing.jpg"
+            "image": "woman_handstand_yoga.jpg"
         }
     },
     {
@@ -1029,11 +1029,11 @@
         "pk": 55,
         "model": "offers.offer",
         "fields": {
-            "name": "gripstrength trainer",
+            "name": "kettlebell set",
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
-            "price": 11.59,
+            "price": 44.59,
             "category": 9,
             "day_one": "",
             "day_two": "",
@@ -1041,9 +1041,10 @@
             "time_one": "",
             "time_two": "",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "hand_grip_trainer.jpg"
+            "image": "kettlebell_set_colorful.jpg"
         }
     },
+
     {
         "pk": 56,
         "model": "offers.offer",
@@ -1080,6 +1081,196 @@
             "time_two": "",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "jordans_gray_basketball.jpg"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "offers.offer",
+        "fields": {
+            "name": "Gym Beginner Set",
+            "is_course": false,
+            "for_beginners": true,
+            "descr": "Lorem ipsum dolor amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, assumda nobis earum.",
+            "price": 31.99,
+            "category": 9,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "gym_set.jpg"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "offers.offer",
+        "fields": {
+            "name": "red nike cap",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
+            "price": 29.19,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "red_nike_cappy.jpg"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "offers.offer",
+        "fields": {
+            "name": "white nikes edition",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
+            "price": 37.59,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "white_nikes_brickwall.jpg"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "offers.offer",
+        "fields": {
+            "name": "darkred airmax",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
+            "price": 49.19,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "darkred_airmax_nikes.jpg"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "offers.offer",
+        "fields": {
+            "name": "rope swinging",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 12.69,
+            "category": 12,
+            "day_one": "wednesday",
+            "day_two": "saturday",
+            "day_span": "and",
+            "time_one": "7:30am",
+            "time_two": "7:10pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "man_red_ropes_workout.jpg"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "offers.offer",
+        "fields": {
+            "name": "tire flipping",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 17.59,
+            "category": 12,
+            "day_one": "tuesday",
+            "day_two": "wednesday",
+            "day_span": "and",
+            "time_one": "1:20pm",
+            "time_two": "4:50pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_trains_tireflip.jpg"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "offers.offer",
+        "fields": {
+            "name": "master cruncher",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 6.59,
+            "category": 7,
+            "day_one": "thursday",
+            "day_two": "monday",
+            "day_span": "through",
+            "time_one": "9:55am",
+            "time_two": "8:55pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_darkbg_crunches_blonde.jpg"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "offers.offer",
+        "fields": {
+            "name": "kettle swing",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 9.79,
+            "category": 1,
+            "day_one": "thursday",
+            "day_two": "saturday",
+            "day_span": "and",
+            "time_one": "6:45am",
+            "time_two": "6:45pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_gym_kettlebell_swing_blue.jpg"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "offers.offer",
+        "fields": {
+            "name": "soft stretch",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 5.49,
+            "category": 4,
+            "day_one": "saturday",
+            "day_two": "sunday",
+            "day_span": "and",
+            "time_one": "12:45pm",
+            "time_two": "5:15pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "woman_stretching_foot.jpg"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "offers.offer",
+        "fields": {
+            "name": "burning ropes",
+            "is_course": true,
+            "for_beginners": false,
+            "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
+            "price": 9.99,
+            "category": 12,
+            "day_one": "monday",
+            "day_two": "sunday",
+            "day_span": "through",
+            "time_one": "1:55pm",
+            "time_two": "8:25pm",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "man_gym_black_ropes_on_shoulder.jpg"
         }
     }
 ]

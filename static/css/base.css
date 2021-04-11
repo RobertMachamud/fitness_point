@@ -16,7 +16,6 @@ body
     background: url('/media/muscle_flexing.jpg') no-repeat center center;
     background-size: cover;
     height: calc(100vh - 128px);
-    font-family: 'Lato';
 }
 
 .no-pointer-events
@@ -193,6 +192,7 @@ header
 /* Feature Cards */
 #feature-cards
 {
+    position: relative;
     min-height: 100vh;
     padding-top: 5em;
     padding-bottom: 5em;
@@ -217,6 +217,8 @@ header
     margin-top: 3em;
     margin-bottom: 3em;
     padding: 0 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
 }
 
 .feature-item
@@ -283,6 +285,16 @@ header
     width:100%;
 }
 
+/* Landing Page Image (Png) */
+.landig-page-png
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 45%;
+    max-width: 100vw;
+    transform: translateX(-50%);
+}
 
 /* ------------------------------------------------------------------ TOASTS (BOOTSTRAP) */
 
@@ -666,4 +678,12 @@ input:focus
 }
 
 
+.management-cont
+{
+    color: #fff;
+}
 
+
+/* resp. */
+
+/* - .landig-page-png  (maybe even none)*/

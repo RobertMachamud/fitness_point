@@ -114,7 +114,7 @@ def upd_offer(request, offer_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated the offer!')
-            return redirect(reverse('offer_detail', args=[offer.id]))
+            return redirect(reverse('offer_details', args=[offer.id]))
         else:
             messages.error(
                 request, 'Failed to update the offer. \
@@ -142,5 +142,5 @@ def del_offer(request, offer_id):
 
     offer = get_object_or_404(Offer, pk=offer_id)
     offer.delete()
-    messages.success(request, 'offer deleted!')
+    messages.success(request, 'Offer successfully deleted!')
     return redirect(reverse('offers'))

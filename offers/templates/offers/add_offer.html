@@ -11,18 +11,17 @@
 
 {% block content %}
     <div class="dark-background"></div>
-    <div class="container">
+    <div class="container management-cont">
         <div class="row">
             <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Offer Management</h2>
-                <h5 class="text-muted">Add an Offer</h5>
-                <hr>
+                <h2 class="logo-font mb-4 text-uppercase mt-5">Offer Management</h2>
+                <div class="white-hr w100"></div>
+                <h5 class="">Add an Offer</h5>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5 mt-3">
                 <form method="POST" action="{% url 'add_offer' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -33,8 +32,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'offers' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Offer</button>
+                        <a class="btn redish-border text-white rounded-0" href="{% url 'offers' %}">Cancel</a>
+                        <button class="btn redish-bg px-5 text-white text-uppercase redish-hover rounded-0" type="submit">Add Offer</button>
                     </div>
                 </form>
             </div>            
@@ -44,10 +43,10 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
-        });
-    </script>
+        <script type="text/javascript">
+            $('#new-image').change(function() {
+                var file = $('#new-image')[0].files[0];
+                $('#filename').text(`Image will be set to: ${file.name}`);
+            });
+        </script>
 {% endblock %}
