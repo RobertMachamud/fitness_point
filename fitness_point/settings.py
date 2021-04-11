@@ -28,7 +28,10 @@ SECRET_KEY = 'a(0g^_2x$84p8@)4r!-#pcnjxm41_sd0#4c82hx*x*5_5)=#7_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'robs-fitnesspoint.herokuapp.com',
+    'localhost'
+]
 
 
 # Application definition
@@ -120,19 +123,19 @@ WSGI_APPLICATION = 'fitness_point.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
-
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://iotjfhajkogimf:1ff8b545e5a2974929f10c97f78940a9f8e089b3ab925c77f76c0994e6a569d1@ec2-34-198-31-223.compute-1.amazonaws.com:5432/d7b6vr1vokq5da')
-# }
-
-
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+            # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
