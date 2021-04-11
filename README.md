@@ -287,8 +287,7 @@ Click <a href="https://help.github.com/en/github/creating-cloning-and-archiving-
 
 
 ## Acknowledgements
-  - Michael From Tutor Support for his awesome help and many hours of working with me without making it easy 😎
-  - My Mentor for his help (tips, links, etc.) and his great energy! 
+  - Jo From Tutor Support for her help and nice and kind energy 😎
   - Tutor support at Code Institute for their support.
 
 

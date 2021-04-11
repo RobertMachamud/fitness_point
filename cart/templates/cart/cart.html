@@ -70,20 +70,20 @@
                                             <div class="form-group">
                                                 <div class="input-group mobile-qty">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm redish-bg redish-hover rounded-0" 
+                                                        <button class="decr-qty-btn btn btn-sm redish-bg redish-hover rounded-0" 
                                                             data-item_id="{{ item.item_id }}" id="decr-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm no-pointer-events"></i>
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                    <input class="form-control input-group form-control-sm qty-input" type="number"
                                                         name="qty" value="{{ item.qty }}" min="1" max="99"
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm redish-bg redish-hover rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <button class="incr-qty-btn btn btn-sm redish-bg redish-hover rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="incr-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm no-pointer-events"></i>
                                                             </span>
