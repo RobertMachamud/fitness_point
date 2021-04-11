@@ -190,13 +190,21 @@ header
     color: #fff;
 }
 
-/* Info Card */
-#info-cards
+/* Feature Cards */
+#feature-cards
 {
     min-height: 100vh;
     padding-top: 5em;
+    padding-bottom: 5em;
 }
 
+.transition
+{
+    -webkit-transition:0.2s ease 0s;
+    -moz-transition:0.2s ease 0s;
+    -o-transition:0.2s ease 0s;
+    transition:0.2s ease 0s;
+}
 
 .info-icon
 {
@@ -211,14 +219,13 @@ header
     padding: 0 5%;
 }
 
-
 .feature-item
 {
     position:relative;
     padding: 50px 40px;
+    color: rgba(255,255,255,.6);
     background-color: rgba(141,147,159,0.1);
     border-left: 3px solid var(--redish);
-    color: rgba(255,255,255,.8);
     -webkit-transition: .2s;
     -moz-transition: .2s;
     -o-transition: .2s;
@@ -240,62 +247,42 @@ header
     
 .feature-item:hover
 {
-    color: #fff
+    color: #fff !important;
 }
 
 .feature-item:hover h6
 {
-    color:#fff
+    color:#fff !important;
 }
 
-/* .feature-item::before
+/* Redish Card Hover */
+.redish-card-hover
 {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: var(--redish);
-    width: 0;
-    height: 100%;
-} */
-
-.gradient-hover
-{
-    background: var(--redish);
     position:relative;
     z-index:1;
 }
 
-.gradient-hover::before
+.redish-card-hover::before
 {
     content:"";
-    width:0;
-    z-index:-1;
     position:absolute;
     top:0;
     bottom:0;
     left:0;
+    width:0;
+    z-index:-1;
+    background: var(--redish);
     -webkit-transition:0.3s ease 0s;
     -moz-transition:0.3s ease 0s;
     -o-transition:0.3s ease 0s;
     transition:0.3s ease 0s;
 }
 
-.gradient-hover:hover::before
-{width:100%}
-
-
-/* 
-{background-image:linear-gradient(left, #fe3e0b 0%, #fc0247 100%);background-image:-moz-linear-gradient(left, #fe3e0b 0%, #fc0247 100%);background-image:-webkit-linear-gradient(left, #fe3e0b 0%, #fc0247 100%);background-image:linear-gradient(left, #fe3e0b 0%, #fc0247 100%)} */
-
-
-
-/*  */
-.f-icon
+.redish-card-hover:hover::before
 {
-    font-size: 36px;
-    line-height: 1;
+    width:100%;
 }
+
 
 /* ------------------------------------------------------------------ TOASTS (BOOTSTRAP) */
 
