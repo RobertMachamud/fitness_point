@@ -24,6 +24,11 @@ body
     pointer-events: none !important;
 }
 
+.size-up-txt
+{
+    font-size: 1.06em;
+}
+
 .capfirst
 {
     text-transform: capitalize;
@@ -59,11 +64,24 @@ body
     background: #555;
     background: #888;
 }
-
+/* !!! */
 
 /* ------------------------------------------------------------------ COLORS */
 
+.dark-bg
+{
+    background: var(--dark-bg) !important;
+}
 
+.dark-bg-hover:hover
+{
+    background: rgba(13,17,22,.9) !important;
+}
+
+.black-color-hover:hover
+{
+    color: #000 !important;
+}
 
 .dark-white-bg
 {
@@ -110,6 +128,11 @@ header
     background: #212224;
 }
 
+.btn-black.black-color-hover:hover.btn-black.black-color-hover i
+{
+    color: #000 !important;
+}
+
 .menu-btn
 {
     font-size: 1.5em;
@@ -150,7 +173,7 @@ header
     width: 100%;
     height: 8%;
     background: linear-gradient(to top, var(--dark-bg), transparent);
-    z-index: 999999;
+    z-index: 99;
 }
 
 .to-offers-button
@@ -167,6 +190,112 @@ header
     color: #fff;
 }
 
+/* Info Card */
+#info-cards
+{
+    min-height: 100vh;
+    padding-top: 5em;
+}
+
+
+.info-icon
+{
+    font-size: 1.5em;
+    color: #fafafa;
+}
+
+.feature-headline
+{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 0 5%;
+}
+
+
+.feature-item
+{
+    position:relative;
+    padding: 50px 40px;
+    background-color: rgba(141,147,159,0.1);
+    border-left: 3px solid var(--redish);
+    color: rgba(255,255,255,.8);
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    cursor: default;
+}
+
+.feature-item i
+{
+    margin-bottom: 37px;
+}
+    
+.feature-item .f-icon
+{
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 37px;
+}
+    
+.feature-item:hover
+{
+    color: #fff
+}
+
+.feature-item:hover h6
+{
+    color:#fff
+}
+
+/* .feature-item::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--redish);
+    width: 0;
+    height: 100%;
+} */
+
+.gradient-hover
+{
+    background: var(--redish);
+    position:relative;
+    z-index:1;
+}
+
+.gradient-hover::before
+{
+    content:"";
+    width:0;
+    z-index:-1;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    -webkit-transition:0.3s ease 0s;
+    -moz-transition:0.3s ease 0s;
+    -o-transition:0.3s ease 0s;
+    transition:0.3s ease 0s;
+}
+
+.gradient-hover:hover::before
+{width:100%}
+
+
+/* 
+{background-image:linear-gradient(left, #fe3e0b 0%, #fc0247 100%);background-image:-moz-linear-gradient(left, #fe3e0b 0%, #fc0247 100%);background-image:-webkit-linear-gradient(left, #fe3e0b 0%, #fc0247 100%);background-image:linear-gradient(left, #fe3e0b 0%, #fc0247 100%)} */
+
+
+
+/*  */
+.f-icon
+{
+    font-size: 36px;
+    line-height: 1;
+}
 
 /* ------------------------------------------------------------------ TOASTS (BOOTSTRAP) */
 
@@ -540,13 +669,6 @@ input:focus
 {
     font-size: 1.04em;
 }
-
-.size-up-txt
-{
-    font-size: 1.06em;
-}
-
-
 
 .bg-image
 {

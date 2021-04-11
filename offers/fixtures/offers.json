@@ -307,7 +307,7 @@
         "pk": 17,
         "model": "offers.offer",
         "fields": {
-            "name": "green nikes",
+            "name": "dark red nikes - high",
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -319,7 +319,7 @@
             "time_one": "",
             "time_two": "",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "green_nikes.jpg"
+            "image": "dark_red_high_nikes.jpg"
         }
     },
     {
@@ -1042,6 +1042,44 @@
             "time_two": "",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "hand_grip_trainer.jpg"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "offers.offer",
+        "fields": {
+            "name": "dark red nikes - high",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
+            "price": 65.79,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "dark_red_high_nikes.jpg"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "offers.offer",
+        "fields": {
+            "name": "gray jordans",
+            "is_course": false,
+            "for_beginners": false,
+            "descr": "Lorem ipsum dolor amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, assumda nobis earum.",
+            "price": 79.49,
+            "category": 8,
+            "day_one": "",
+            "day_two": "",
+            "day_span": "",
+            "time_one": "",
+            "time_two": "",
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "jordans_gray_basketball.jpg"
         }
     }
 ]
