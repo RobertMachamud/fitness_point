@@ -1,8 +1,8 @@
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
-    <div class="toast-header bg-white text-dark">
-        <strong class="mr-auto">Success!</strong>
+    <div class="toast-header">
+        <strong class="mr-auto">Way To Go!</strong>
         <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -41,11 +41,11 @@
                         <span class="float-right">${{ cart_total|floatformat:2 }}</span>
                     </p></strong>
                     {% if for_free_del > 0 %}
-                        <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
+                        <p class="mb-0 p-2 my-2 bg-warning shadow-sm text-black text-center">
                             Spend <strong>${{ for_free_del }}</strong> more to get free delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'to_cart' %}" class="btn btn-black btn-block rounded-0">
+                    <a href="{% url 'to_cart' %}" class="btn redish-bg text-white redish-hover btn-block rounded-0">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>

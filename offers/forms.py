@@ -1,5 +1,6 @@
 from django import forms
 from .models import Offer, Category
+from .widgets import CustomClearableFileInput
 
 
 class OfferForm(forms.ModelForm):
@@ -7,6 +8,9 @@ class OfferForm(forms.ModelForm):
     class Meta:
         model = Offer
         fields = '__all__'
+
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

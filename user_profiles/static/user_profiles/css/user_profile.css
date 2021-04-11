@@ -1,6 +1,17 @@
+/* height of profile form + submit button */
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
+    max-height: 416px;
     overflow-y: auto;
+}
+
+.orders-table
+{
+    color: #fff;
+}
+
+.orders-table th
+{
+    font-weight: 500;
 }
 
 #profile-update-form .form-control {
@@ -8,7 +19,7 @@
 }
 
 #profile-update-form input::placeholder {
-    color: #aab7c4;
+    color: #525252;
 }
 
 #id_default_country,

@@ -3,8 +3,15 @@
 {% block content %}
     <div class="container">
         <div class="header-cont"></div>
+        <div class="scroll-top-btn d-none no-pointer-events">
+            <a class="btt-link d-flex h-100">
+                <i class="fas fa-chevron-up mx-auto my-auto text-white"></i>
+            </a>	
+        </div>
         <!-- md img backgournd - smaller -> dark-bg -->
-        <div class="dark-background d-md-none"></div>
+        <div class="dark-background">
+            <img class="bg-image" src="{{ MEDIA_URL }}woman_blue_sportspants.png" alt="">
+        </div>
         <div class="row mt-5">
             <div class="col-12 col-md-6 mt-5">
                 <div class="allauth-form-inner-content">

@@ -24,6 +24,11 @@ body
     pointer-events: none !important;
 }
 
+.capfirst
+{
+    text-transform: capitalize;
+}
+
 /* ------------------------------------------------------------------ SCROLLBAR */
         
 /* Scrollbar (width) */
@@ -137,6 +142,16 @@ header
 
 
 /* ------------------------------------------------------------------ HOME PAGE */
+
+.dark-bg-filter
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(to top, var(--dark-bg), transparent);
+    z-index: 999999;
+}
 
 .to-offers-button
 {
@@ -459,12 +474,19 @@ span.badge:hover
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: #fff; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #eee;;
     border-radius: 0;
+    
+}
+
+input:focus
+{
+    /* !!! */
+    outline-color: var(--redish) !important;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -472,7 +494,7 @@ span.badge:hover
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: #525252;
 }
 
 .allauth-form-inner-content button,
@@ -488,7 +510,7 @@ span.badge:hover
     -ms-user-select: none;
     user-select: none;
     background-color: #000;
-    border: 1px solid #000;
+    border: 1px solid #eee;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -506,5 +528,33 @@ span.badge:hover
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #fff; /* text-info */
 }
+
+.form-check-label
+{
+    color: #525252;
+}
+
+.sign-up-txt
+{
+    font-size: 1.04em;
+}
+
+.size-up-txt
+{
+    font-size: 1.06em;
+}
+
+
+
+.bg-image
+{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    height: 80%;
+}
+
+
+
