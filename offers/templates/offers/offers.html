@@ -18,8 +18,8 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-2">
-                <h2 class="logo-font text-white text-uppercase mt-5">OFFERS</h2> 
+            <div class="col text-center mt-lg-2">
+                <h2 class="logo-font text-white text-uppercase mt-lg-5">OFFERS</h2> 
                 {% for cat in curr_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'offers' %}?category={{ cat.name }}">
                         <span class="p-2 mt-2 badge badge-white text-white rounded-0 border">{{ cat.user_friendly }}</span>
@@ -32,7 +32,7 @@
             <div class="offers-container col-10 mt-4 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
+                        <div class="sort-select-wrapper w-sm-100 w-lg-50">
                             <!-- !!! -->
                             <select id="sort-selector" class="sorting-select custom-select custom-select-sm border border-{% if curr_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if curr_sorting == 'None_None' %}selected{% endif %}>Sort Offers By...</option>
@@ -58,14 +58,14 @@
                 <div class="row">
                     {% for offer in offers %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
-                            <div class="card offer">
+                            <div class="card rounded-border offer">
                                 {% if offer.image %}
                                         <a href="{% url 'offer_details' offer.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ offer.image.url }}" alt="{{ offer.name }}">
+                                            <img class="card-img-top img-fluid rounded-border" src="{{ offer.image.url }}" alt="{{ offer.name }}">
                                         </a>
                                     {% else %}
                                         <a href="{% url 'offer_details' offer.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ offer.name }}">
+                                            <img class="card-img-top img-fluid rounded-border" src="{{ MEDIA_URL }}noimage.png" alt="{{ offer.name }}">
                                         </a>
                                     {% endif %}
                                 <div class="card-body pb-0">
@@ -116,7 +116,7 @@
                                             </p>
                                             {% endif %}
                                             <div class="col text-center" style="padding: 0">
-                                                <a href="{% url 'offer_details' offer.id %}" class="go-to-offer-btn btn rounded-0 text-uppercase">
+                                                <a href="{% url 'offer_details' offer.id %}" class="go-to-offer-btn redish-hover btn rounded-0 text-uppercase">
                                                     {% if offer.is_course %}
                                                         join course
                                                     {% else %}

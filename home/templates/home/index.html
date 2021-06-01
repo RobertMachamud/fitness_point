@@ -7,6 +7,7 @@
         <div class="col"></div>
     </div>
 </div>
+<div class="gap-top"></div>
 {% endblock %}
 
 {% block content %}
@@ -16,15 +17,27 @@
         <div class="scroll-top-btn shadow-sm rounded-0 border redish-border">
             <a class="btt-link d-flex h-100">
                 <i class="fas fa-chevron-up mx-auto my-auto text-white"></i>
-            </a>	
+            </a>
         </div>
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-white">
-                The new collections are here
+        <div class="col-7 col-md-6 my-auto shift-up">
+            <h1 data-aos="fade-up" data-aos-duration="600" class="display-4 logo-font text-white mb-3 landing-page-headline">
+                Skinny isn't sexy, healthy is.
             </h1>
+            <div data-aos="fade-up" data-aos-delay="550" class="landing-txt">
+                <p class="text-white d-none d-sm-block">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde repellendus qui libero, Praesentium,
+                    accusamus beatae quis quisquam voluptatem officiis perferendis adipisci.
+                </p>
+                <p data-aos="fade-up" data-aos-delay="550" class="text-white d-block d-sm-none">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde repellendus qui libero, vadipisci.
+                </p>
+            </div>
             <div class="my-5">
-                <h4>
-                    <a href="{% url 'offers' %}" class="to-offers-button btn btn-lg rounded-0 text-uppercase py-3">Go To Shop</a>
+                <h4 data-aos="fade-up" data-aos-delay="850" class="to-offers">
+                    <a href="{% url 'offers' %}"
+                        class="to-offers-button redish-hover text-white btn btn-lg rounded-0 text-uppercase py-3">Go To
+                        Shop
+                    </a>
                 </h4>
             </div>
         </div>
@@ -32,40 +45,158 @@
 </div>
 
 <section id="feature-cards" class="top-full dark-bg bottom-half">
-                <h2 class="text-white text-center feature-headline">Our Easy Gym-Coupon System</h2>
-                <div class="container">
-                    <div class="row min-vh-100">
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="feature-item redish-card-hover">
-                                <span class="f-icon transition inline-flex"><i class="fas fa-user"></i></span>
-                                <h6 class="mb-15 transition text-uppercase text-white fs-18">Buy A Coupon</h6>
-                                <p class="mb-0 transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            </div>
-                        </div> 
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="feature-item redish-card-hover">
-                                <span class="f-icon transition mb-3 inline-flex"><i class="fas fa-lock"></i></span>
-                                <h6 class="mb-15 transition text-uppercase text-white fs-18">Come To our gym</h6>
-                                <p class="mb-0 transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="feature-item redish-card-hover">
-                                <span class="f-icon transition mb-3 inline-flex"><i class="fas fa-heart-broken"></i></span>
-                                <h6 class="mb-15 transition text-uppercase text-white fs-18">Enjoy The Training</h6>
-                                <p class="mb-0 transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            </div>
-                        </div>
-                    </div> 
+    <h2 data-aos="fade-up" class="text-white text-center feature-headline">Our Easy-Gym-Coupon System</h2>
+    <div class="container">
+        <div class="row min-vh-100 features-grid">
+            <div data-aos="fade-right" data-aos-delay="300" class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="feature-item redish-card-hover mb-3 mb-sm-0">
+                    <span class="f-icon transition inline-flex"><i class="fas fa-user"></i></span>
+                    <h6 class="mb-15 transition text-uppercase text-white fs-18">Buy A Coupon</h6>
+                    <p class="mb-0 transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
-                <img class="landig-page-png" src="{{ MEDIA_URL }}man_holding_jumprope_sport.png" alt="">
-            </section>
-        <div class="container-fluid h-50" style="background: var(--redish)">
-            <div class="row h-40"></div>
-            <div class="col text-center">
-                <h1 class="text-white">How Does our Coupon System work?</h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="feature-item redish-card-hover mb-3 mb-sm-0">
+                    <span class="f-icon transition mb-3 inline-flex"><i class="fas fa-lock"></i></span>
+                    <h6 class="mb-15 transition text-uppercase text-white fs-18">Come To our gym</h6>
+                    <p class="mb-0 transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="300" class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="feature-item redish-card-hover mb-3 mb-sm-0">
+                    <span class="f-icon transition mb-3 inline-flex"><i class="fas fa-heart-broken"></i></span>
+                    <h6 class="mb-15 transition text-uppercase text-white fs-18">Enjoy The Training</h6>
+                    <p class="mb-0 transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
             </div>
         </div>
-        
+    </div>
+    <div class="png-cont">
+        <img class="landig-page-png" src="{{ MEDIA_URL }}man_holding_jumprope_sport.png" alt="man holding jumping rope">
+    </div>
+</section>
+<div class="container-fluid h-50 redish-bg" style="position: relative">
+    <div data-aos="fade-right" data-aos-duration="600" onclick="toggleMembershipInfo(event)" class="toggle-info-btn btn border-bottom rounded-0 text-white">
+        <i class="fas fa-info no-pointer-events"></i>
+    </div>
+    <div class="row h-50"></div>
+    <div class="col text-center redish-section">
+        <div class="redish-section-wrapper">
 
+            <h2 data-aos="fade-up" data-aos-duration="350" class="text-white text-uppercase redish-section-headline">
+                start your</h2>
+            <h1 data-aos="fade-up" data-aos-duration="400" class="text-white text-uppercase">Training Right Now</h1>
+            <a data-aos="fade-up" data-aos-duration="600" id="join-us-btn" class="btn text-white redish-section-btn rounded-0 mt-3 px-2"
+                href="{% url 'all_memberships' %}">Join Us</a>
+
+            <!-- Membership Info Container -->
+            <div class="membership-info-cont text-white d-none before-ani">
+                <h3 class="text-white text-uppercase">
+                    Join Now and get
+                </h3>
+                <div class="white-hr my-4" style="width: 8rem;"></div>
+                <p>
+                    <span class="text-white" style="margin-right: 5px"><i class="fas fa-check"></i></span>
+                    All Courses <span style="text-decoration: underline">Totally Free</span>
+                </p>
+                <p>
+                    <span class="text-white" style="margin-right: 5px"><i class="fas fa-check"></i></span>
+                    10% Discount On Items
+                </p>
+                <div class="links-to-membership d-flex justify-content-center align-items-center mt-4 mb-1">
+                    <a href="#" class="text-white member-link rounded-1 px-2">Week</a>
+                    <span class="text-white mx-2" style="font-size: 1.3em">|</span>
+                    <a href="#" class="text-white member-link rounded-1 px-2">Year</a>
+                    <span class="text-white mx-2" style="font-size: 1.3em">|</span>
+                    <a href="#" class="text-white member-link rounded-1 px-2">Month</a>
+                </div>
+                <a href="{% url 'all_memberships' %}" class="btn mt-4 to-membership-btn rounded-0 border text-white text-uppercase px-2">
+                    join us now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid dark-bg footer-section">
+    <div class="row">
+        <div class="container-fluid hide-overflow-x">
+            <div data-aos="fade-left" class="socials-cont d-flex align-items-center">
+                <a href="http://www.facebook.com" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="http://www.instagram.com" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="http://www.twitter.com" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="http://www.pinterest.com" target="_blank" class="social-link">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    const infoBtnMembership = document.querySelector(".toggle-info-btn");
+    const redishSection = document.querySelector(".redish-section-wrapper");
+
+    const joinUsBtn = document.querySelector("#join-us-btn");
+    const memberInfoCont = document.querySelector(".membership-info-cont");
+    const redishSctH2 = document.querySelector(".redish-section-wrapper h2");
+    const redishSctH1 = document.querySelector(".redish-section-wrapper h1");
+    
+
+    let infoVisible = false;
+    const slideUpElements = [redishSctH2, redishSctH1, joinUsBtn];
+
+
+    const toggleMembershipInfo = (e) => {
+        let timer = 600;
+
+        if (infoVisible) {
+            setTimeout(() => memberInfoCont.classList.add("d-none"), 800);
+            setTimeout(() => memberInfoCont.classList.add("before-ani"), 100);
+            setTimeout(() => memberInfoCont.classList.remove("slide-up-info"), 100);
+
+            for (let i = 0; i <= 2; i++) {
+                setTimeout(() => {
+                    slideUpElements[i].classList.remove("no-pointer-events");
+                    slideUpElements[i].classList.remove("before-ani");
+                    slideUpElements[i].classList.add("slide-up-ani");
+                }, timer);
+                timer += 150;
+            }
+            
+            e.target.innerHTML = `<i class="fas fa-info no-pointer-events"></i>`;
+            infoVisible = false;
+        } else if (!infoVisible) {
+            slideUpElements.forEach(el => {
+                if (el.classList.contains("slide-up-ani")) {el.classList.remove("slide-up-ani")};
+                el.classList.add("no-pointer-events", "before-ani");
+            });
+
+            setTimeout(() => memberInfoCont.classList.remove("d-none", "before-ani"), 800);
+            setTimeout(() => memberInfoCont.classList.add("slide-up-info"), 600);
+
+            e.target.innerHTML = `<i class="fas fa-times no-pointer-events"></i>`;
+            infoVisible = true;
+        }
+    }
+
+
+    // AOS Initiation
+    AOS.init({
+        easing: 'ease-in-out-sine'
+    });
+</script>
 {% endblock %}

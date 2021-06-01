@@ -9,13 +9,26 @@
 html
 {
     height: 100%;
+    background: var(--dark-bg);
+    overflow-x: hidden;
 }
 
 body 
 {
     background: url('/media/muscle_flexing.jpg') no-repeat center center;
     background-size: cover;
-    height: calc(100vh - 128px);
+    /* height: calc(100vh - 128px); */
+    height: 100vh;
+}
+
+.relative-pos
+{
+    position: relative;
+}
+
+.rounded-border
+{
+    border-radius: 13px !important;
 }
 
 .no-pointer-events
@@ -23,16 +36,44 @@ body
     pointer-events: none !important;
 }
 
+.hide-overflow
+{
+    overflow: hidden;
+}
+
+/* Increses font size by a bit */
 .size-up-txt
 {
     font-size: 1.06em;
 }
 
+/* Capitalizes first letter */
 .capfirst
 {
     text-transform: capitalize;
 }
 
+/* Gives txt margin left and bottom  */
+.intend-p
+{
+    margin-left: 10px;
+    font-weight: 300;
+    word-wrap: break-word;
+    margin-bottom: 13px !important;
+}
+
+.gap
+{
+    margin: 0 3px;
+}
+
+/* Shifts content slightly up (translate) */
+.shift-up
+{
+    transform: translateY(-3em);
+}
+
+ 
 /* ------------------------------------------------------------------ SCROLLBAR */
         
 /* Scrollbar (width) */
@@ -70,6 +111,11 @@ body
 .dark-bg
 {
     background: var(--dark-bg) !important;
+}
+
+.text-dark
+{
+    color: var(--dark-bg) !important;
 }
 
 .dark-bg-hover:hover
@@ -123,7 +169,6 @@ body
 
 header
 {
-    background: #000;
     background: #212224;
 }
 
@@ -135,6 +180,16 @@ header
 .menu-btn
 {
     font-size: 1.5em;
+}
+
+.navbar-toggler
+{
+    outline: none !important;
+}
+
+.navbar-nav
+{
+    padding-bottom: 1em;
 }
 
 .nav-link
@@ -157,13 +212,51 @@ header
     background: #525252;
 }
 
+/* Dropdown Icon Nav Links (first one not included) */
+.dropdown-item i,
+.dropdown-item span
+{
+    font-size: .3em;
+    color: var(--redish);
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 5px;
+}
+
+.dropdown-item i
+{
+    font-size: .8em;
+    margin-right: 15px;
+}
+
+/* Dropdown box shadow */
+.nav-box-shadow
+{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, 
+                rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 .header-cont
 {
     height: 128px;
 }
 
+/* Navlink Icons */
+.nav-link .nav-icon
+{
+    color: var(--redish);
+    margin-right: 10px; 
+    width: 10px;
+    margin-right: 20px;
+}
 
-/* ------------------------------------------------------------------ HOME PAGE */
+.wider-icon
+{
+    font-size: 1.3em !important;
+}
+
+
+/* ------------------------------------------------------------------ LANDING PAGE */
 
 .dark-bg-filter
 {
@@ -181,7 +274,6 @@ header
     color: #fafafa;
 }
 
-.to-offers-button:hover,
 .go-to-offer-btn:hover
 {
     /* !!! */
@@ -194,7 +286,7 @@ header
 {
     position: relative;
     min-height: 100vh;
-    padding-top: 5em;
+    /* padding-top: 5em; */
     padding-bottom: 5em;
 }
 
@@ -214,7 +306,7 @@ header
 
 .feature-headline
 {
-    margin-top: 3em;
+    /* margin-top: 3em; */
     margin-bottom: 3em;
     padding: 0 5%;
     font-family: 'Roboto', sans-serif;
@@ -285,15 +377,150 @@ header
     width:100%;
 }
 
-/* Landing Page Image (Png) */
-.landig-page-png
+.png-cont
 {
     position: absolute;
     bottom: 0;
     left: 50%;
-    height: 45%;
+    width: 30rem;
     max-width: 100vw;
     transform: translateX(-50%);
+}
+
+/* Landing Page Image (Png) */
+.landig-page-png
+{
+    width: 100%;
+}
+
+/* Redish Section */
+.redish-section-wrapper
+{
+    transform: translateY(-4.5em);
+    cursor: default;
+}
+
+.redish-section-btn
+{
+    border: solid 1px #fff;
+    font-size: 1.3em;
+}
+
+.redish-section-btn:hover
+{
+    background: #fff;
+    color: var(--redish) !important;
+}
+
+/* Membership Info Container */
+.toggle-info-btn 
+{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 0 .5em .5em .5em !important;
+}
+
+.toggle-info-btn:hover
+{
+    background: #fafafa;
+    color: var(--redish) !important;
+    border-bottom-color: #000 !important;
+}
+
+.membership-info-cont
+{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* Slide Up Animation */
+.slide-up-ani
+{
+    animation: slide-up .5s forwards ease-in;
+}
+
+.slide-up-info
+{
+    animation: slide-info .5s forwards ease-in;
+}
+
+.before-ani
+{
+    opacity: 0 !important;
+    transform: translateY(25%) !important;
+}
+
+@keyframes slide-up
+{
+    to
+    {
+        opacity: 1 !important;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up-info
+{
+    to
+    {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.to-membership-btn:hover
+{
+    cursor: pointer;
+    background: var(--dark-bg);
+}
+
+.member-link
+{
+    transition: .2s;
+    cursor: pointer;
+}
+
+.member-link:hover
+{
+    background: #fafafa !important;
+    color: var(--dark-bg) !important;
+    text-decoration: none;
+}
+
+
+.png-allauth
+{
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    height: 80%;
+    animation: fade-left-animation .5s forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+
+@keyframes fade-left-animation
+{
+    to
+    {
+        right: 5%;
+        opacity: 1;
+    }
+}
+
+.bg-image
+{
+    width: 100%;
+    height: 100%;
+}
+
+.management-cont
+{
+    color: #fff;
 }
 
 /* ------------------------------------------------------------------ TOASTS (BOOTSTRAP) */
@@ -317,7 +544,8 @@ header
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
+.arrow-up 
+{
     width: 0; 
     height: 0; 
     border-left: 4px solid transparent;
@@ -329,39 +557,48 @@ header
 }
 
 /* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
+.arrow-primary 
+{
     border-bottom-color: #007bff !important;
 }
 
-.arrow-secondary {
+.arrow-secondary 
+{
     border-bottom-color: #6c757d !important;
 }
 
-.arrow-success {
+.arrow-success 
+{
     border-bottom-color: #28a745 !important;
 }
 
-.arrow-danger {
+.arrow-danger 
+{
     border-bottom-color: #dc3545 !important;
 }
 
-.arrow-warning {
+.arrow-warning 
+{
     border-bottom-color: #ffc107 !important;
 }
 
-.arrow-info {
+.arrow-info 
+{
     border-bottom-color: #17a2b8 !important;
 }
 
-.arrow-light {
+.arrow-light 
+{
     border-bottom-color: #f8f9fa !important;
 }
 
-.arrow-dark {
+.arrow-dark 
+{
     border-bottom-color: #343a40 !important;
 }
 
-.cart-notification-wrapper {
+.cart-notification-wrapper 
+{
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -379,6 +616,7 @@ header
     height: 40px;
     cursor: pointer;
     z-index: 9999999;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.8);
 }
 
 /* Scroll Btn on left side */
@@ -441,7 +679,14 @@ span.badge:hover
     background: #333;
     color: #fff;
     /* !!!*/
+    cursor: default;
+    border-radius: 13px !important;
     box-shadow: 0 0 10px rgba(0,0,0,.8);
+}
+
+.card-img-top
+{
+    border-radius: 13px !important;
 }
 
 /* Price */
@@ -476,6 +721,30 @@ span.badge:hover
     cursor: pointer;
 }
 
+.footer-section
+{
+    overflow-x: hidden;
+}
+
+.socials-cont
+{
+    min-height: 10vw;
+    padding-left: 3%;
+}
+
+.socials-cont a
+{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.socials-cont a:hover
+{
+    color: var(--redish);
+}
 
 /* ------------------------------------------------------------------ OFFER DETAILS */
 
@@ -535,6 +804,11 @@ span.badge:hover
     font-size: 1.3em;
 }
 
+.incr-qty-btn,
+.decr-qty-btn
+{
+    border-radius: 0;
+}
 
 /* ------------------------------------------------------------------ SECRURE CHECKOUT */
 
@@ -544,11 +818,328 @@ span.badge:hover
 }
 
 
+/* ------------------------------------------------------------------ ALLAUTH */
+
+/* Allauth form formatting */
+.allauth-form-inner-content p 
+{
+    margin-top: 1.5rem; /* mt-4 */
+    color: #fff; /* text-secondary */
+}
+
+.allauth-form-inner-content input 
+{
+    border-color: #eee;;
+    border-radius: 0;
+}
+
+input:focus
+{
+    /* !!! */
+    outline-color: var(--redish) !important;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) 
+{
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder 
+{
+    color: #525252;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] 
+{
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #eee;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover 
+{	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a 
+{
+	color: #fff; /* text-info */
+}
+
+.form-check-label
+{
+    color: #525252;
+}
+
+.sign-up-txt
+{
+    font-size: 1.04em;
+}
+
+
+/* ------------------------------------------------------------------ MEMBERSHIP */
+
+.member-card
+{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.membership-name
+{
+    letter-spacing: 3px;
+}
+
+/* Inner Tilt Area (for Vanilla Tilt js) */
+.inner-tilt
+{
+    transform: translateZ(20px);
+}
+
+/* Red Cover (Background for png) */
+.img-cover
+{
+    position: absolute;
+    background: #CD051D;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+/* Membership Icon */
+.member-png
+{
+    /* transform: rotateY(180deg); */
+    height: 100%;
+    transition: .5s ease;
+    transition-delay: .1s;
+    transform: rotate(0deg) scale(.8);
+    border-radius: 13px;
+}
+
+/* HOVER Effects for Member-Cards */
+.member-card:hover .member-png
+{
+    transform: rotate(-30deg) scale(.9) translateY(5px);
+}
+
+.member-card.middle-card:hover .member-png
+{
+    transform: rotate(0deg) scale(.85) translateY(-5px) !important;
+
+}
+
+/* Only middle card (Membership) */
+.member-png.middle-card-member
+{
+    transition: .5 ease;
+    height: 80% !important;
+}
+
+.member-card.middle-card:hover .member-png.middle-card-member
+{
+    transform: rotate(30deg) scale(1) translateY(5px) !important;
+}
+
+.member-card:hover .inner-tilt,
+.member-card:hover .text-muted
+{
+    color: rgba(255,255,255,.6) !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+
+.member-card:hover .card-hr
+{
+    border: solid 1px rgba(255,255,255,.6);
+}
+
+.membership-btn:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+    background: rgba(223, 52, 73, .9) !important;
+    color: #fafafa !important;
+}
+
 /* ------------------------------------------------------------------ MEDIA QUERIES */
+
+@media only screen and (max-width: 1300px)
+{
+    .png-allauth
+    {
+        right: -5% !important;
+    }
+
+    .png-cont
+    {
+        width: 25rem;
+    }
+}
+
+
+@media only screen and (max-width: 991px)
+{
+    /* body
+    {
+        height: calc(100vh - 116px);
+    } */
+    
+    .display-4.logo-font.text-white.landing-page-headline
+    {
+        font-weight: 600;
+        font-size: 2.5rem !important;
+    }
+
+    .shift-up
+    {
+        padding-left: 5%;
+    }
+
+    .display-4.logo-font.text-white.feature-headline
+    {
+        font-size: 3rem !important;
+    }
+
+    .socials-cont
+    {
+        height: 20vh;
+    }
+
+    .dropdown-item
+    {
+        color: var(--redish);
+    }
+
+    .dropdown-menu
+    {
+        background: #212224;
+        margin: 1rem 0;
+        /* box-shadow: none; */
+    }
+
+    .gap-top
+    {
+        height: 12px;
+    }
+
+    .to-offers-button
+    {
+        width: 100%;
+        font-size: .7em !important;
+    }
+
+    .btn-left-side
+    {
+        left: auto !important;
+        right: 3% !important;
+    }
+
+    .header-cont
+    {
+        height: 116px;
+    }
+
+    .display-4.logo-font.text-white,
+    .feature-headline
+    {
+        font-size: 2rem !important;
+    }
+
+    h1.text-white
+    {
+        font-size: 1.8rem;
+    }
+
+    .redish-section-headline
+    {
+        font-size: 1.5rem;
+    }
+
+    /* socials - > 10vh */
+
+    .nav-link 
+    {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg 
+    {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler 
+    {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    .png-cont
+    {
+        display: none;
+    }
+
+    .png-allauth,
+    .bg-image
+    {
+        display: none;
+    }
+
+    .nav-item.dropdown .nav-link
+    {
+        margin: .3rem 0;
+    }
+
+    .btn.rounded-0 
+    {
+        padding: .375rem .375rem;
+    }
+
+    .btn.rounded-0.btn-lg 
+    {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .offers-price.in-details
+    {
+        padding-left: .5em;
+    }
+
+    .delails-wrapper
+    {
+        margin-left: 0 !important;
+    }
+}
+
 
 @media only screen and (max-width: 800px)
 {
-    .cart-cont
+    /* .cart-cont
     {
         font-size: .7em;
     }
@@ -566,6 +1157,100 @@ span.badge:hover
     .mobile-qty-td
     {
         padding-right: 0 !important;
+    } */
+}
+
+
+
+@media (orientation: landscape) and (min-width: 1000px)
+{
+    .socials-cont
+    {
+        min-height: 20vh;
+    }
+}
+
+
+@media (orientation: landscape) and (max-width: 1000px)
+{
+
+    .display-4.logo-font.text-white.landing-page-headline
+    {
+        font-weight: 600;
+        font-size: 2rem !important;
+    }
+
+    .shift-up
+    {
+        /* padding-left: 5%; */
+        margin-top: 5% !important;
+    }
+
+    .landing-txt
+    {
+        display: none !important;
+    }
+
+    .to-offers
+    {
+        width: 80%;
+        opacity: 1 !important;
+        transform: translate(0) !important;
+    }
+
+    .redish-section-wrapper 
+    {
+        transform: translateY(-3.5em);
+    }
+
+    .redish-section-wrapper h2
+    {
+        font-size: 1.2rem;
+    }
+
+    .redish-section-wrapper h1
+    {
+        font-size: 1.3rem;
+    }
+
+    .redish-section-wrapper .redish-section-btn
+    {
+        font-size: 1rem;
+    }
+    
+    .socials-cont
+    {
+        min-height: 40vh;
+    }
+}
+
+
+@media only screen and (min-width: 767px) and (max-width: 991px)
+{
+    .features-grid
+    {
+        min-height: 50vw !important;
+    }
+
+    .png-cont
+    {
+        display: block;
+        right: -10% !important;
+        width: 19rem;
+        left: auto;
+    }
+}
+
+
+@media only screen and (max-width: 600px)
+{
+    /* .display-4.logo-font.text-white.feature-headline
+    {
+        font-size: 2.3rem !important;
+    } */
+    .landing-page-headline
+    {
+        font-size: 2rem !important;
     }
 }
 
@@ -584,106 +1269,3 @@ span.badge:hover
         padding-right: 2rem !important
     }
 }
-
-
-@media only screen and (max-width: 458px)
-{
-    .back-to-shop-btn
-    {
-        margin-bottom: .5em;
-    }
-}
-
-
-
-
-
-/* Allauth form formatting */
-
-.allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #fff; /* text-secondary */
-}
-
-.allauth-form-inner-content input {
-    border-color: #eee;;
-    border-radius: 0;
-    
-}
-
-input:focus
-{
-    /* !!! */
-    outline-color: var(--redish) !important;
-}
-
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
-}
-
-.allauth-form-inner-content input::placeholder {
-    color: #525252;
-}
-
-.allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #eee;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
-}
-
-.allauth-form-inner-content a {
-	color: #fff; /* text-info */
-}
-
-.form-check-label
-{
-    color: #525252;
-}
-
-.sign-up-txt
-{
-    font-size: 1.04em;
-}
-
-.bg-image
-{
-    position: absolute;
-    bottom: 0;
-    right: 5%;
-    height: 80%;
-}
-
-
-.management-cont
-{
-    color: #fff;
-}
-
-
-/* resp. */
-
-/* - .landig-page-png  (maybe even none)*/

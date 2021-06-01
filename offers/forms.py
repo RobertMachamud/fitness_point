@@ -20,5 +20,5 @@ class OfferForm(forms.ModelForm):
 
         self.fields['category'].choices = user_friendly
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            field.widget.attrs['class'] = 'border-0 rounded-0'
             # !!!

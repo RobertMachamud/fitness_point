@@ -10,10 +10,12 @@
         </div>
         <!-- md img backgournd - smaller -> dark-bg -->
         <div class="dark-background">
-            <img class="bg-image" src="{{ MEDIA_URL }}woman_blue_sportspants.png" alt="">
+            <div class="png-allauth">
+                    <img src="{{ MEDIA_URL }}woman_blue_sportspants.png" alt="woman in blue yoga pants">
+                </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-12 col-md-6 mt-5">
+        <div class="row mt-lg-5">
+            <div data-aos="fade-up" class="col-12 col-md-6 mb-5 mt-lg-5">
                 <div class="allauth-form-inner-content">
                     {% block inner_content %}
                     {% endblock %}
@@ -21,4 +23,15 @@
             </div>
         </div>
     </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        easing: 'ease-in-out-sine'
+    });
+</script>
 {% endblock %}

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-cont">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="dark-background"></div>
+<div class="scroll-top-btn shadow-sm rounded-0 border redish-border">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-chevron-up mx-auto my-auto text-white"></i>
+    </a>
+</div>
+<div class="container-fluid">
+    <div class="row mb-5">
+        <div class="col text-center mt-lg-2">
+            <h2 class="logo-font text-white text-uppercase mt-lg-5">Membership</h2>
+            <div class="mb-2 w-50 white-hr"></div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center" style="padding: 0 5%;">
+
+        {% for membership in memberships %}
+
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                <div class="card rounded-border offer member-card {% if forloop.counter == 2 %} middle-card middle-card-member {% endif %}" data-tilt data-tilt-scale="1.05" data-tilt-glare data-tilt-max-glare="0.3">
+                    <a href="" class="relative-pos">
+                        <img class="card-img-top img-fluid rounded-border" src="{{ MEDIA_URL }}red_nikes.jpg" alt="red nike shoe">
+                        <div class="img-cover rounded-border">
+                            <img src="{{ membership.image.url }}" alt="Hand and dumbbell icon" class="member-png inner-tilt {% if forloop.counter == 2 %} middle-card-member {% endif %}">
+                        </div>
+                    </a>
+                    <div class="card-body pb-0 inner-tilt">
+                        <p class="mb-0 text-center text-uppercase membership-name">{{ membership.name }}</p>
+                    </div>
+                    <div class="mb-3 card-hr inner-tilt"></div>
+                    <div class="card-footer pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col inner-tilt">
+                                <p class="offers-price lead mb-0 text-center font-weight-bold">
+                                    <span class="floating-dollar">$</span> {{ membership.price }}
+                                    <span class="floating-cents"></span>
+                                </p>
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted" href="#">
+                                        <i class="fab fa-buffer mr-1"></i>
+                                        Offer
+                                    </a>
+                                </p>
+                                <small class="text-muted">
+                                    <i class="fas fa-clock mr-1"></i>
+                                    Some info
+                                </small>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar-alt mr-1"></i>
+                                        More Info
+                                    </small>
+                                </p>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-dolly mr-1"></i>
+                                        No shipping - pick it up here
+                                    </small>
+                                </p>
+                                <div class="col text-center" style="padding: 0">
+                                    <a href=""
+                                        class="membership-btn go-to-offer-btn redish-hover btn rounded-0 text-uppercase mb-1">
+                                        Join Us 
+                                    </a>
+                                </div>
+                                {% if request.user.is_superuser %}
+                                <small class="ml-0">
+                                    <a href="">Update</a> |
+                                    <a class="text-danger" href="">Delete</a>
+                                </small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    
+        <script src="https://unpkg.com/vanilla-tilt@1.7.0/lib/vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".member-card"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+                "max-glare": 1
+            });
+
+            // AOS Initiation
+            AOS.init({
+                easing: 'ease-in-out-sine'
+            });
+        </script>
+
+{% endblock %}

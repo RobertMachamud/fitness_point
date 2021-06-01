@@ -27,16 +27,36 @@
             <p class="my-0">Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0 py-2" aria-labelledby="user-options" style="transform: translateX(-1.5rem)">
+        <!-- !!! - Membership -->
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="{% url 'add_offer' %}" class="dropdown-item">Offers Management</a>
+                <a href="{% url 'add_offer' %}" class="dropdown-item">
+                    <i class="far fa-star text-white"></i>
+                    Manage Member
+                </a>
+                <a href="{% url 'add_offer' %}" class="dropdown-item">
+                    <i class="fas fa-user-cog text-white"></i>
+                    Manage Offers
+                </a>
             {% endif %}
-            <a href="" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="{% url 'user_profile' %}" class="dropdown-item">
+                <i class="fas fa-user text-white"></i>
+                My Profile
+            </a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">
+                <i class="fas fa-power-off text-white"></i>
+                Logout
+            </a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item">
+                <i class="fas fa-user-plus text-white"></i>
+                Register
+            </a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">
+                <i class="fas fa-sign-in-alt text-white"></i>
+                Login
+            </a>
         {% endif %}
     </div>
 </li>

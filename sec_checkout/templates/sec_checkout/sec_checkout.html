@@ -57,6 +57,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.qty }}</p>
                         </div>
                         <div class="col-3 text-right">
+                            <!-- to change -->
                             <p class="my-0 small text-muted">${{ item.offer.price | calc_subtotal:item.qty }}</p>
                         </div>
                     </div>
@@ -72,13 +73,14 @@
                     <div class="col-3">
                         <p class="my-0">${{ cart_total | floatformat:2 }}</p>
                         <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                        <p class="mt-0 mb-2">${{ delivery | floatformat:2 }}(9 %)</p>
+                        <!-- !!! -->
+                        <p class="mt-0 mb-2">(9 %) ${{ delivery | floatformat:2 }}</p>
                         <p class="my-0"><strong>${{ gr_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="pl-4">Please fill out the form below to complete your order</p>
+                <p class="pl-3">Please fill out the form below to complete your Order.</p>
                 <form action="{% url 'sec_checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-3">
@@ -97,7 +99,7 @@
                         {{ order_form.county | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+								<label class="form-check-label redish-color" for="id-save-info" style="text-decoration: underline; font-size: .9em;">Save this delivery information to Profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">

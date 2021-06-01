@@ -1,0 +1,41 @@
+[
+    {
+        "pk": 1,
+        "model": "membership.membership",
+        "fields": {
+            "name": "Week",
+            "price": 120.99,
+            "duration_days": 7,
+            "discount": false,
+            "discount_price": 88.99,
+            "image": "",
+            "descr": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "membership.membership",
+        "fields": {
+            "name": "Year",
+            "price": 999.99,
+            "duration_days": 365,
+            "discount": false,
+            "discount_price": 888.99,
+            "image": "",
+            "descr": ""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "membership.membership",
+        "fields": {
+            "name": "Month",
+            "price": 350.99,
+            "duration_days": 31,
+            "discount": false,
+            "discount_price": 275.99,
+            "image": "",
+            "descr": ""
+        }
+    }
+]

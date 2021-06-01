@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'cart',
     'sec_checkout',
     'user_profiles',
+    'membership',
 
     # Other Apps
     'crispy_forms',
@@ -205,6 +206,7 @@ if 'USE_AWS' in os.environ:
 FREE_DEL = 75
 TAXES_PERC = 9
 DEL_COSTS = 5.99
+DISCOUNT_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')

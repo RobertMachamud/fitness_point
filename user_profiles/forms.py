@@ -5,7 +5,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        exclude = ('user',)
+        exclude = ('user', 'is_member',)
 
     def __init__(self, *args, **kwargs):
 
@@ -14,6 +14,8 @@ class UserProfileForm(forms.ModelForm):
 
         super().__init__(*args, **kwargs)
         placeholders = {
+            # !!!
+            'default_f_name': 'Full Name',
             'default_phone_nr': 'Phone Number',
             'default_postcode': 'Postal Code',
             'default_city': 'Town or City',
@@ -31,5 +33,6 @@ class UserProfileForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
                 # !!!
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = 'border-0 \
+                rounded-0 profile-form-input'
             self.fields[field].label = False

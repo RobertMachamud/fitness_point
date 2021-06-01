@@ -1,0 +1,109 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+         <li class="nav-item d-block d-lg-none">
+            <a class="logo-font mt-3 font-weight-bold text-uppercase nav-link text-white mr-5" href="{% url 'home' %}" id="home-link">
+                <i class="fas fa-home wider-icon nav-icon"></i>
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-offerings-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-money-check-alt nav-icon"></i>
+                All Offers
+            </a>
+            <div class="dropdown-menu nav-box-shadow border-0" aria-labelledby="all-offers-link">
+                <a href="{% url 'offers' %}" class="dropdown-item font-weight-bold redish-hover text-uppercase">
+                    All Offers
+                </a>
+                <a href="{% url 'offers' %}?sort=price&direction=asc" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    By Price
+                </a>
+                <a href="{% url 'offers' %}?sort=category&direction=asc" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    By Category
+                </a>
+                <a href="{% url 'offers' %}?sort=is_course&direction=asc" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    By Offer Type
+                </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="courses-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-calendar-alt nav-icon wider-icon"></i>
+                All Courses
+            </a>
+            <div class="dropdown-menu nav-box-shadow border-0" aria-labelledby="courses-link">
+                <a href="{% url 'offers' %}?category=strength,cardio,yoga,stretching,physio_recovery,kick_boxing,bums_tums_legs" class="dropdown-item font-weight-bold redish-hover text-uppercase">
+                    All Courses
+                </a>
+                <a href="{% url 'offers' %}?category=strength" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Strength
+                </a>
+                <a href="{% url 'offers' %}?category=cardio" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Cardio
+                </a>
+                <a href="{% url 'offers' %}?category=yoga" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Yoga
+                </a>
+                <a href="{% url 'offers' %}?category=stretching" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Stretching
+                </a>
+                <a href="{% url 'offers' %}?category=kick_boxing" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Kick-/Boxing
+                </a>
+                <a href="{% url 'offers' %}?category=physio_recovery" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Physio/Recovery
+                </a>
+                <a href="{% url 'offers' %}?category=bums_tums_legs" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Bums, Tums & Legs
+                </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="gym-equipment-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-dumbbell nav-icon"></i>
+                Gym Equipment
+            </a>
+            <div class="dropdown-menu nav-box-shadow border-0" aria-labelledby="gym-equipment-link">
+                <a href="{% url 'offers' %}?category=items_equipment,items_clothing" class="dropdown-item font-weight-bold redish-hover text-uppercase">All GymEquipments</a>
+                <a href="{% url 'offers' %}?category=items_equipment" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Items &amp; Gear
+                </a>
+                <a href="{% url 'offers' %}?category=items_clothing" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    Clothing
+                </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link" href="#" id="new-offers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-fire-alt nav-icon wider-icon"></i>
+                Brand New
+            </a>
+            <div class="dropdown-menu nav-box-shadow border-0" aria-labelledby="new-offers-link">
+                <a href="{% url 'offers' %}?category=new_courses,new_items" class="dropdown-item font-weight-bold redish-hover text-uppercase">All New Offers</a>
+                <a href="{% url 'offers' %}?category=new_courses" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    New Courses
+                </a>
+                <a href="{% url 'offers' %}?category=new_items" class="dropdown-item">
+                    <span class="redish-color">&#9632;</span>
+                    New Items
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>

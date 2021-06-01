@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('default_f_name', models.CharField(blank=True, max_length=50, null=True)),
                 ('default_phone_nr', models.CharField(blank=True, max_length=20, null=True)),
                 ('default_country', django_countries.fields.CountryField(blank=True, max_length=2, null=True)),
                 ('default_postcode', models.CharField(blank=True, max_length=20, null=True)),

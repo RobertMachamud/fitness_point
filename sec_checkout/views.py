@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -56,6 +57,7 @@ def sec_checkout(request):
             order.save()
             order = order_form.save()
             for item_id, data_item in cart.items():
+                print("DAATAAIITTEEMMM", data_item)
                 try:
                     offer = Offer.objects.get(id=item_id)
                     if isinstance(data_item, int):
@@ -65,6 +67,8 @@ def sec_checkout(request):
                             qty=data_item,
                         )
                         order_line_item.save()
+                        if offer.name.lower() == "jump rope":
+                            print("LLLLLOOOOOOOWWWWWWWEEEEERRRRRR!!!!!")
                     else:
                         for sz, qty in data_item['items_by_sz'].items():
                             order_line_item = OrderLineItem(
@@ -105,12 +109,13 @@ def sec_checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any info
+        # the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 user_profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'full_name': user_profile.user.get_full_name(),
+                    'f_name': user_profile.user.default_f_name,
                     'email': user_profile.user.email,
                     'phone_nr': user_profile.default_phone_nr,
                     'country': user_profile.default_country,
@@ -151,9 +156,17 @@ def checkout_successful(request, order_nr):
         order.user_profile = profile
         order.save()
 
+        print("OOORRRDDDERRRRR", order.lineitems, profile.is_member)
+
+        # for i, j in order.lineitems.all:
+        #     print("LOOOOOOP", i, j)
+        # !!!!!!!!!! maybe here - execute toggle_membership function
+        # maybe create var bool. - if order.smth. includes membership etc -> change profile_data.is_member
+
         # Save the user's info
         if save_info:
             profile_data = {
+                'default_f_name': order.f_name,
                 'default_phone_nr': order.phone_nr,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
@@ -161,8 +174,13 @@ def checkout_successful(request, order_nr):
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
+                # 'is_member': var* / if/else oneline - var,
             }
-            user_profile_form = UserProfileForm(profile_data, instance=user_profile)
+
+            # if memebership in cart - set countdown for membership var
+
+            # !!!!! changed not yet
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
@@ -176,5 +194,7 @@ def checkout_successful(request, order_nr):
     template = 'sec_checkout/checkout_successful.html'
     content = {
         'order': order,
+        'taxes': settings.TAXES_PERC,
     }
+    print(content)
     return render(request, template, content)

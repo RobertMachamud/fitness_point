@@ -15,6 +15,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
@@ -63,23 +64,59 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
+                    <li class="list-inline-item dropdown shadow-invert">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="redish-color fas fa-user fa-lg"></i></div>
-                                <p class="my-0">Account</p>
+                                <div>
+                                    {% if request.user.is_authenticated %}
+                                        <i class="redish-color fas fa-user fa-lg"></i>
+                                    {% else %}
+                                        <i class="redish-color fas fa-user-plus fa-lg"></i>
+                                    {% endif %}
+                                </div>
+                                    {% if request.user.is_authenticated %}
+                                        <p class="my-0">Account</p>
+                                    {% else %}
+                                        <p class="my-0">Account</p>
+                                    {% endif %}
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu nav-box-shadow border-0" aria-labelledby="user-options">
+                            <!-- !!!  -->
+                            {% if not request.user.is_member %}
+                                <a href="{% url 'all_memberships' %}" class="dropdown-item">
+                                    <i class="fas fa-star"></i>
+                                    Membership
+                                </a>
+                            {% endif %}
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_offer' %}" class="dropdown-item">Offers Management</a>
+                                    <a href="{% url 'add_offer' %}" class="dropdown-item">
+                                        <i class="fas fa-user-cog"></i>
+                                        Manage Offers
+                                    </a>
+                                    <a href="{% url 'add_offer' %}" class="dropdown-item">
+                                        <i class="far fa-star"></i>
+                                        Manage Membersh.
+                                    </a>
                                 {% endif %}
-                                <a href="{% url 'user_profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'user_profile' %}" class="dropdown-item">
+                                    <i class="fas fa-user"></i>
+                                    My Profile
+                                </a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">
+                                    <i class="fas fa-power-off"></i>
+                                    Logout
+                                </a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">
+                                    <i class="fas fa-user-plus"></i>
+                                    Register
+                                </a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Login
+                                </a>
                             {% endif %}
                         </div>
                     </li>
@@ -135,6 +172,7 @@
     {% endblock %}
 
     {% block postloadjs %}
+    
         <script type="text/javascript">
 
             $('.toast').toast('show');
@@ -149,6 +187,7 @@
             scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
         </script>
+        
     {% endblock %}
 
     

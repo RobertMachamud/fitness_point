@@ -4,6 +4,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "cardio",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "a basic cardio course where the course participants can improve their endurance and grow over their limits.",
@@ -23,6 +25,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "body pump",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor site itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate remia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -42,6 +46,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "yoga",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sito. Debitis accusamus in, temporibus corporis neque eaque, impedit saepe itaque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia  ipsum, quo necessitatibus maxime officia praesentium. Auted debitis laborum, deserunt assumenda nobis earum.",
@@ -61,6 +67,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "body stretch",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Losit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem debitis laborum, deserunt assumenda earum.",
@@ -80,6 +88,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "boxing for women",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corpor Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -99,6 +109,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Recovery Stretch",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": true,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -118,6 +130,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Booty Pump",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -137,6 +151,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Red Nikes (Women)",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -156,6 +172,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Jump Rope",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -175,6 +193,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Protein Shaker",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem deserunt assumenda nobis earum.",
@@ -194,6 +214,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Krav Maga",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque assumenda nobis earum.",
@@ -213,6 +235,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "beginner bundle",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": true,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis ure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -232,6 +256,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "lady power",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt earum.",
@@ -251,6 +277,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "boxing for men",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae.",
@@ -270,6 +298,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "pad traning",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -289,6 +319,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "run pullover",
+            "has_sizes": true,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -308,6 +340,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "dark red nikes - high",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -327,6 +361,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "vintage nikes",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -346,6 +382,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "pad traning",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -365,6 +403,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "yoga stretch",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -384,6 +424,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "lady burner",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -403,6 +445,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "treadmill",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -422,6 +466,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "bodyweight",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -440,19 +486,21 @@
         "pk": 24,
         "model": "offers.offer",
         "fields": {
-            "name": "treadmill",
+            "name": "Balance Force",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
-            "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
-            "price": 22.99,
-            "category": 12,
+            "descr": "Lorem ipsum dolor sit amet conbitis aut accusamus in, teporibus corporis neque eaque, cum, impedit saepe itaque  commodi iure! Ullam perferendis nobis  magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus  officia praesentium. Autem ad laborum, deserunt asmenda nobis earum.",
+            "price": 9.89,
+            "category": 1,
             "day_one": "monday",
             "day_two": "thursday",
             "day_span": "through",
-            "time_one": "9:20am",
-            "time_two": "2:40pm",
+            "time_one": "7:25am",
+            "time_two": "2:25pm",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "woman_running_mashine.jpg"
+            "image": "man_pushup_one_arm_blue_balance_board.jpg"
         }
     },
     {
@@ -460,6 +508,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "advanced yoga",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -479,6 +529,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "guns pump",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -498,6 +550,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "antigravity yoga",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -517,6 +571,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "airbike",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commodi iure! Ullam perferendis nobis esse magni. Sint cupiditate rem quaerat cumque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -536,6 +592,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "functional training",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -555,6 +613,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "stretching for men",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -574,6 +634,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "stretching for women",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -593,6 +655,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "core stability",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -612,6 +676,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "kettlebell hussle",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -631,6 +697,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "gymnastics",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -650,6 +718,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "meditation",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": true,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -669,6 +739,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "spinning",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -688,6 +760,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "shoulder aerobic",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -707,6 +781,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "quads",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque commis esse magni. Sint cupiditate rem quaerat cumque ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -726,6 +802,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "pullup routine",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -745,6 +823,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "deadlift hell",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -764,6 +844,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "rowing",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem. Sint cupiditate rem quaerat, quo maxime officia praesentium. dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -783,6 +865,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "aerobic",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem. Sint cupiditate rem quaerat, quo maxime officia praesentium. dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -802,6 +886,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "medicine ball 10kg",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -821,6 +907,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "muay thai",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lupiditat rem quaerat, quo maxime officia praesentium sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -840,6 +928,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "violet dumbbells 3kg",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
@@ -859,6 +949,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "lime green nikes",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
@@ -878,6 +970,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "smart watch",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime praesentium. Autem debitis laborum assumenda nobi earum.",
@@ -897,6 +991,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "purple jacket women",
+            "has_sizes": true,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
@@ -916,6 +1012,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "yoga mat",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis  laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum assumenda nobi earum.",
@@ -935,6 +1033,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "acro yoga",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lupiditat rem quaerat, quo maxime officia praesentium sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -954,6 +1054,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "white top for women",
+            "has_sizes": true,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis moltia quae ipsum, quo necessitatibus maxime officia. Autem ad debitis laborum assumenda nobi earum.",
@@ -973,6 +1075,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "black nikes for men",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis moltia quae ipsum, quo necessitatibus maxime officia. Autem ad debitis laborum assumenda nobi earum.",
@@ -992,6 +1096,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "gravity squat",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lupiditat rem quaerat, quo maxime officia praesentium sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremqueAutem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1011,6 +1117,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "orange pumas for men",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis moltia quae ipsum, quo necessitatibus maxime officia. Autem ad debitis laborum assumenda nobi earum.",
@@ -1030,6 +1138,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "kettlebell set",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1044,12 +1154,13 @@
             "image": "kettlebell_set_colorful.jpg"
         }
     },
-
     {
         "pk": 56,
         "model": "offers.offer",
         "fields": {
             "name": "dark red nikes - high",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
@@ -1069,6 +1180,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "gray jordans",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, assumda nobis earum.",
@@ -1088,6 +1201,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "Gym Beginner Set",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": true,
             "descr": "Lorem ipsum dolor amet consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, assumda nobis earum.",
@@ -1107,6 +1222,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "red nike cap",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
@@ -1126,6 +1243,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "white nikes edition",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
@@ -1145,6 +1264,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "darkred airmax",
+            "has_sizes": true,
+            "is_shoe": true,
             "is_course": false,
             "for_beginners": false,
             "descr": "Lorem ipsum dolor sit consectetur adipisicing elit. Debitis ut accusamus in, temporibus corporis neque eaque laudantium mollitia quae ipsum, quo necessitatibus maxime officia praesentium. borum, deserunt assumenda nobis earum.",
@@ -1164,6 +1285,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "rope swinging",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1183,6 +1306,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "tire flipping",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1202,6 +1327,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "master cruncher",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1221,6 +1348,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "kettle swing",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1240,6 +1369,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "soft stretch",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",
@@ -1259,6 +1390,8 @@
         "model": "offers.offer",
         "fields": {
             "name": "burning ropes",
+            "has_sizes": false,
+            "is_shoe": false,
             "is_course": true,
             "for_beginners": false,
             "descr": "Lorem dolor sit amet conbitis ut accusamus in, temporibus corporis neque eaque, cum, impedit saepe itaque doloremque. Sint cupiditate rem quaerat cumque, quo necessitatibus maxime officia praesentium. Autem ad debitis laborum, deserunt assumenda nobis earum.",

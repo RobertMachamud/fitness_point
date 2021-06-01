@@ -1,0 +1,10 @@
+<a href="{% url 'offer_details' item.offer.id %}" class="my-0 pr-1 text-white text-uppercase item-name">{{ item.offer.name }}</a>
+<p class="my-0 text-muted"><strong style="font-weight: 400">Size: </strong>
+    {% if item.offer.has_sizes and not item.offer.is_shoe %}
+        {{ item.size|upper }}
+    {% elif item.offer.has_sizes and item.offer.is_shoe %}
+        {{ item.size }}
+    {% else %}
+        <small>N/A</small>
+    {% endif %}
+</p>

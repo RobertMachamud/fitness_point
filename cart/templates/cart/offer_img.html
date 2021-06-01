@@ -1,0 +1,7 @@
+{% if item.offer.image %}
+    <a href="{% url 'offer_details' item.offer.id %}">
+        <img class="w-100 rounded-border" src="{{ item.offer.image.url }}" alt="{{ item.offer.name }}">
+    </a>
+{% else %}
+    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.offer.name }}">
+{% endif %}

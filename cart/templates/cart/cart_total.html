@@ -1,0 +1,19 @@
+<h6><strong>Cart Total: ${{ cart_total|floatformat:2 }}</strong></h6>
+<h6>Delivery: ${% if for_free_del > 0 %} {{ delivery|floatformat:2 }}
+        {% else %} 0{% endif %}
+</h6>
+<h6>Taxes: % {{ curr_taxes_perc }}</h6>
+<h4 class="mt-4"><strong>Your Total: <span class="ml-2 cart-prices redish-color">${{ gr_total|floatformat:2 }}</span></strong></h4>
+{% if for_free_del > 0 %}
+    <p class="mb-1 redish-color">
+        You could get free delivery by spending just <strong class="text-white">${{ for_free_del }}</strong> more!
+    </p>
+{% else %}
+    <p class="mb-1 redish-color">
+        {% if user_member %}
+            You're a <span class="text-white">Member</span> so the delivery is <strong class="text-white">FOR FREE!</strong>
+        {% else %}
+            You've reached ${{ free_del }} so the delivery is <strong class="text-white">FOR FREE!</strong>
+        {% endif %}
+    </p>
+{% endif %}

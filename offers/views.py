@@ -23,7 +23,13 @@ def all_offers(request):
                 messages.error(request, "You need to enter a search criteria.")
                 return redirect(reverse('offers'))
 
-            queries_to_search = Q(name__icontains=search_query) | Q(descr__icontains=search_query)
+            queries_to_search = Q(name__icontains=search_query) \
+                | Q(descr__icontains=search_query) \
+                | Q(day_one__icontains=search_query) \
+                | Q(day_two__icontains=search_query) \
+                | Q(day_span__icontains=search_query) \
+                | Q(time_one__icontains=search_query) \
+                | Q(time_two__icontains=search_query)
             offers = offers.filter(queries_to_search)
 
         if 'sort' in request.GET:
